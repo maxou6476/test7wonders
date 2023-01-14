@@ -1,46 +1,28 @@
 package com.example._7wondersarchitect;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-import javafx.stage.Stage;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 
 public class HelloController {
 
-    private Stage stage;
     @FXML
-    private Label welcomeText;
+    private Slider slider_player;
+    @FXML
+    private Text nbPlayerText;
+
 
     @FXML
     protected void switchscene() throws IOException {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("game-view.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
-            jinx_aff.stage.setTitle("Hello!");
-            jinx_aff.stage.setScene(scene);
-            jinx_aff.stage.show();
+            jinx_aff.loadFXMLScene("game-view.fxml");
     }
 
     @FXML
-    protected void onSecondButton() {
-        welcomeText.setText("Affichage 2");
+    void updatePlayerN(MouseEvent event) {
+        nbPlayerText.setText(String.valueOf((int)slider_player.getValue()));
     }
-
-    @FXML
-    private Slider valueSliderPlayer;
-
-    @FXML
-    public void sliderTextDrag() {
-        System.out.println("sheeesh");
-        int sliderValue = (int) valueSliderPlayer.getValue();
-        System.out.println(sliderValue + " ");
-        welcomeText.setText(valueSliderPlayer.getValue()+" ");
-    }
-
-
-
 }

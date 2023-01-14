@@ -8,18 +8,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Main extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
-        jinx_aff.stage.setTitle("Hello!");
-        jinx_aff.stage.setScene(scene);
-        jinx_aff.stage.show();
-    }
+public class Main {
 
     public static void main(String[] args) {
-        launch();
+
+        jinx_aff jinxAff = new jinx_aff();
+        jinxAff.jinx_launch();
+
         ArrayList<Object> Deck = new ArrayList<>();
         ArrayList<Object> Jetons = new ArrayList<>();
 
