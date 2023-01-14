@@ -1,7 +1,10 @@
 package com.example._7wondersarchitect;
 
 public class Alexandrie extends Wonders{
-    public Alexandrie(String nom) {
-        super(nom);
+    String nom = "Alexandrie";
+    int NBEtage = 5;
+    int NBPiece = 5;
+    public Alexandrie(String nom, int NBEtage, int NBPiece) {
+        super(nom, NBEtage, NBPiece);
     }
 }
