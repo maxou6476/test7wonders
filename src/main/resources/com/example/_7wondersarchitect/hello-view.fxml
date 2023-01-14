@@ -24,6 +24,6 @@
    
                 <Label fx:id="welcomeText" layoutX="500.0" layoutY="500.0" />
       <Slider blockIncrement="1.0" layoutX="258.0" layoutY="380.0" majorTickUnit="1.0" max="7.0" min="2.0" minorTickCount="0" prefHeight="27.0" prefWidth="683.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0" />
-       <Button layoutX="551.0" layoutY="435.0" onAction="#onHelloButtonClick" prefHeight="58.0" prefWidth="96.0" text="START" />
+       <Button layoutX="551.0" layoutY="435.0" onAction="#switchscene" prefHeight="58.0" prefWidth="96.0" text="START" />
    </children>
 </AnchorPane>
