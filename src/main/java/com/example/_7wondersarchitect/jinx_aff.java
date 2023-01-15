@@ -45,8 +45,4 @@ public class jinx_aff extends Application
         jinxstage.setTitle("7Wonders Architect");
         jinxstage.show();
     }
-
-    public static void showplayer(int nbplayer){
-
-    }
 }

@@ -15,6 +15,8 @@ public class Main {
         jinx_aff jinxAff = new jinx_aff();
         jinxAff.jinx_launch();
 
+
+
         ArrayList<Object> Deck = new ArrayList<>();
         ArrayList<Object> Jetons = new ArrayList<>();
 

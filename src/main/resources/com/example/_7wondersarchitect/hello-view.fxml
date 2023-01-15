@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -31,7 +34,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <AnchorPane fx:id="player2A" layoutX="347.0" layoutY="283.0" prefHeight="108.0" prefWidth="217.0">
+      <AnchorPane fx:id="player2A" layoutX="347.0" layoutY="283.0" prefHeight="132.0" prefWidth="217.0">
          <children>
             <Text layoutX="34.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueur 2" wrappingWidth="149.0">
                <font>
@@ -44,9 +47,20 @@
                </font>
             </Text>
             <TextArea layoutY="52.0" prefHeight="38.0" prefWidth="159.0" />
+            <SplitMenuButton fx:id="player2Merveille" layoutX="21.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Merveille">
+               <items>
+                  <MenuItem mnemonicParsing="true" text="merveille 1" />
+                  <MenuItem mnemonicParsing="true" text="merveille 2" />
+                  <MenuItem mnemonicParsing="false" text="merveille 3" />
+                  <MenuItem mnemonicParsing="false" text="merveille 4" />
+                  <MenuItem mnemonicParsing="false" text="merveille 5" />
+                  <MenuItem mnemonicParsing="false" text="merveille 6" />
+                  <MenuItem mnemonicParsing="false" text="merveille 7" />
+               </items>
+            </SplitMenuButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="player1A" layoutX="347.0" layoutY="175.0" prefHeight="108.0" prefWidth="217.0">
+      <AnchorPane fx:id="player1A" layoutX="347.0" layoutY="159.0" prefHeight="132.0" prefWidth="217.0">
          <children>
             <Text layoutX="34.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueur 1" wrappingWidth="149.0">
                <font>
@@ -59,9 +73,20 @@
                </font>
             </Text>
             <TextArea layoutY="52.0" prefHeight="38.0" prefWidth="159.0" />
+            <SplitMenuButton fx:id="player1Merveille" layoutX="16.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Merveille">
+              <items>
+                <MenuItem mnemonicParsing="false" text="merveille 1" />
+                <MenuItem mnemonicParsing="false" text="merveille 2" />
+                  <MenuItem mnemonicParsing="false" text="merveille 3" />
+                  <MenuItem mnemonicParsing="false" text="merveille 4" />
+                  <MenuItem mnemonicParsing="false" text="merveille 5" />
+                  <MenuItem mnemonicParsing="false" text="merveille 6" />
+                  <MenuItem mnemonicParsing="false" text="merveille 7" />
+              </items>
+            </SplitMenuButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="player3A" layoutX="347.0" layoutY="391.0" prefHeight="108.0" prefWidth="217.0">
+      <AnchorPane fx:id="player3A" layoutX="347.0" layoutY="408.0" prefHeight="122.0" prefWidth="217.0">
          <children>
             <Text layoutX="34.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueur 3" wrappingWidth="149.0">
                <font>
@@ -74,9 +99,20 @@
                </font>
             </Text>
             <TextArea layoutY="52.0" prefHeight="38.0" prefWidth="159.0" />
+            <SplitMenuButton fx:id="player3Merveille" layoutX="21.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Merveille">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="merveille 1" />
+                  <MenuItem mnemonicParsing="false" text="merveille 2" />
+                  <MenuItem mnemonicParsing="false" text="merveille 3" />
+                  <MenuItem mnemonicParsing="false" text="merveille 4" />
+                  <MenuItem mnemonicParsing="false" text="merveille 5" />
+                  <MenuItem mnemonicParsing="false" text="merveille 6" />
+                  <MenuItem mnemonicParsing="false" text="merveille 7" />
+               </items>
+            </SplitMenuButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="player4A" layoutX="347.0" layoutY="500.0" prefHeight="108.0" prefWidth="217.0">
+      <AnchorPane fx:id="player4A" layoutX="347.0" layoutY="541.0" prefHeight="132.0" prefWidth="217.0">
          <children>
             <Text layoutX="34.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueur 4" wrappingWidth="149.0">
                <font>
@@ -89,9 +125,20 @@
                </font>
             </Text>
             <TextArea layoutY="54.0" prefHeight="38.0" prefWidth="159.0" />
+            <SplitMenuButton fx:id="player4Merveille" layoutX="21.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Merveille">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="merveille 1" />
+                  <MenuItem mnemonicParsing="false" text="merveille 2" />
+                  <MenuItem mnemonicParsing="false" text="merveille 3" />
+                  <MenuItem mnemonicParsing="false" text="merveille 4" />
+                  <MenuItem mnemonicParsing="false" text="merveille 5" />
+                  <MenuItem mnemonicParsing="false" text="merveille 6" />
+                  <MenuItem mnemonicParsing="false" text="merveille 7" />
+               </items>
+            </SplitMenuButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="player7A" layoutX="681.0" layoutY="391.0" prefHeight="108.0" prefWidth="217.0">
+      <AnchorPane fx:id="player7A" layoutX="681.0" layoutY="415.0" prefHeight="108.0" prefWidth="217.0">
          <children>
             <Text layoutX="34.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueur 7" wrappingWidth="149.0">
                <font>
@@ -121,7 +168,7 @@
             <TextArea layoutY="52.0" prefHeight="38.0" prefWidth="159.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="player5A" layoutX="681.0" layoutY="175.0" prefHeight="108.0" prefWidth="217.0">
+      <AnchorPane fx:id="player5A" layoutX="681.0" layoutY="171.0" prefHeight="108.0" prefWidth="217.0">
          <children>
             <Text layoutX="34.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueur 5" wrappingWidth="149.0">
                <font>
@@ -136,5 +183,6 @@
             <TextArea layoutY="52.0" prefHeight="38.0" prefWidth="159.0" />
          </children>
       </AnchorPane>
+      <ChoiceBox layoutX="525.0" layoutY="213.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
