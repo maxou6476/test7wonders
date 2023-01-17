@@ -43,7 +43,5 @@ public class Main {
         Jetons Progres = new Jeton_Progres("Jeton de progres");
         Jetons Victoire_militaire = new Jeton_Victoir_Militaire("Jeton de victoire militaire");
 
-        
-
     }
 }

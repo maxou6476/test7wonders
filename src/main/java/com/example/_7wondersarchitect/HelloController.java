@@ -2,19 +2,13 @@ package com.example._7wondersarchitect;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
-import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.ContextMenuEvent;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -29,70 +23,17 @@ public class HelloController implements Initializable{
     private Slider slider_player;
     @FXML
     private Text nbPlayerText;
-
     @FXML
     private AnchorPane StartAnchor;
 
     @FXML
-    private ImageView imageP1_choice;
+    private ImageView imageP1_choice,imageP2_choice,imageP3_choice,imageP4_choice,imageP5_choice,imageP6_choice,imageP7_choice;
     @FXML
-    private ImageView imageP2_choice;
+    private TextArea pseudoP1,pseudoP2,pseudoP3,pseudoP4,pseudoP5,pseudoP6,pseudoP7;
     @FXML
-    private ImageView imageP3_choice;
+    private ChoiceBox<String> Player1choicebox,Player2choicebox,Player3choicebox,Player4choicebox,Player5choicebox,Player6choicebox,Player7choicebox;
     @FXML
-    private ImageView imageP4_choice;
-    @FXML
-    private ImageView imageP5_choice;
-    @FXML
-    private ImageView imageP6_choice;
-    @FXML
-    private ImageView imageP7_choice;
-
-    @FXML
-    private TextArea pseudoP1;
-    @FXML
-    private TextArea pseudoP2;
-    @FXML
-    private TextArea pseudoP3;
-    @FXML
-    private TextArea pseudoP4;
-    @FXML
-    private TextArea pseudoP5;
-    @FXML
-    private TextArea pseudoP6;
-    @FXML
-    private TextArea pseudoP7;
-
-
-    @FXML
-    private ChoiceBox<String> Player1choicebox;
-    @FXML
-    private ChoiceBox<String> Player2choicebox;
-    @FXML
-    private ChoiceBox<String> Player3choicebox;
-    @FXML
-    private ChoiceBox<String> Player4choicebox;
-    @FXML
-    private ChoiceBox<String> Player5choicebox;
-    @FXML
-    private ChoiceBox<String> Player6choicebox;
-    @FXML
-    private ChoiceBox<String> Player7choicebox;
-
-
-
-
-
-    @FXML
-    private AnchorPane player3A;
-    @FXML
-    private AnchorPane player4A;
-    @FXML
-    private AnchorPane player5A;
-    @FXML
-    private AnchorPane player6A;
-    @FXML
-    private AnchorPane player7A;
+    private AnchorPane player1A,player2A,player3A,player4A,player5A,player6A,player7A;
 
 
     @FXML
