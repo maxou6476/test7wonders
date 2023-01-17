@@ -12,9 +12,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //launch de l'interface graphique
         jinx_aff jinxAff = new jinx_aff();
         jinxAff.jinx_launch();
-
 
 
         ArrayList<Object> Deck = new ArrayList<>();

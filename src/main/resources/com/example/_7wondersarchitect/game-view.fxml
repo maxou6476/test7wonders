@@ -3,13 +3,89 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._7wondersarchitect.HelloController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._7wondersarchitect.GameController">
    <children>
       <ImageView fitHeight="800.0" fitWidth="1200.0" layoutX="-1.0" pickOnBounds="true">
          <image>
             <Image url="@../../../images/fond_game.jpg" />
          </image>
       </ImageView>
+      <Text fx:id="test" layoutX="127.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="184.13671875">
+         <font>
+            <Font size="31.0" />
+         </font></Text>
+      <Text fx:id="test1" layoutX="127.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="184.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test2" layoutX="127.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="166.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test3" layoutX="127.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="223.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test6" layoutX="127.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="190.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test5" layoutX="127.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="184.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test4" layoutX="127.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="223.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test7" layoutX="474.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="184.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test8" layoutX="474.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="190.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test9" layoutX="474.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="212.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test10" layoutX="474.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="204.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test13" layoutX="474.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="307.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test12" layoutX="474.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="296.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test11" layoutX="474.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="212.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="test14" layoutX="291.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="139.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

@@ -1,16 +1,12 @@
 package com.example._7wondersarchitect;
 
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 import java.io.IOException;
-import java.util.Locale;
 
 public class jinx_aff extends Application
 {
@@ -23,9 +19,9 @@ public class jinx_aff extends Application
     @Override
     public void start(Stage stage) throws IOException
     {
-        // -_-_-_-_-_-_-_-_-_- load the fxml scene -_-_-_-_-_-_-_-_-_-
         jinx_aff.setStage(stage);
         jinx_aff.loadFXMLScene("hello-view.fxml");
+
     }
 
     public static void setStage(Stage stage)
@@ -45,4 +41,7 @@ public class jinx_aff extends Application
         jinxstage.setTitle("7Wonders Architect");
         jinxstage.show();
     }
+    public static String pseudoPlayer[] = new String[7];
+    public static String merveillesPlayer[] = new String[7];
+    public static int nbPlayer = 0;
 }
