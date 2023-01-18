@@ -45,6 +45,7 @@ public class HelloController implements Initializable{
         jinx_aff.pseudoPlayer[4] = pseudoP5.getText();
         jinx_aff.pseudoPlayer[5] = pseudoP6.getText();
         jinx_aff.pseudoPlayer[6] = pseudoP7.getText();
+        jinx_aff.nbPlayer = (int)slider_player.getValue();
         jinx_aff.loadFXMLScene("game-view.fxml");
     }
 
@@ -236,6 +237,5 @@ public class HelloController implements Initializable{
                 jinx_aff.merveillesPlayer[6] = (String)choiceboxtab[6].getValue();
             }
         });
-        jinx_aff.nbPlayer = (int)slider_player.getValue();
     }
 }
