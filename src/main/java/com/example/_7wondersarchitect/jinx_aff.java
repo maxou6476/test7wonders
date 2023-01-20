@@ -4,8 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class jinx_aff extends Application
@@ -41,7 +43,8 @@ public class jinx_aff extends Application
         jinxstage.setTitle("7Wonders Architect");
         jinxstage.show();
     }
-    public static String pseudoPlayer[] = new String[7];
-    public static String merveillesPlayer[] = new String[7];
+
+    public static String[] pseudoPlayer = new String[7];
+    public static String[] merveillesPlayer = new String[7];
     public static int nbPlayer = 0;
 }

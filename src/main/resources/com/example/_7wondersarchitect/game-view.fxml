@@ -3,6 +3,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._7wondersarchitect.GameController">
    <children>
@@ -11,12 +13,47 @@
             <Image url="@../../../images/fond_game.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgPlayerTurn1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgPlayerTurnP" fitHeight="250.0" fitWidth="250.0" layoutX="475.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgPlayerTurn2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn1" fitHeight="350.0" fitWidth="350.0" layoutX="425.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgPlayerTurn6" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgPlayerTurn5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgPlayerTurn4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgPlayerTurn3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="psuedoPlayer7" layoutX="82.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sdfg" textAlignment="CENTER" wrappingWidth="161.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="psuedoPlayer1" layoutX="424.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ghghhff" textAlignment="CENTER" wrappingWidth="350.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="psuedoPlayer2" layoutX="75.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="fghtgd" textAlignment="CENTER" wrappingWidth="175.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="psuedoPlayer3" layoutX="75.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gnbhvbf" textAlignment="CENTER" wrappingWidth="175.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="psuedoPlayer4" layoutX="75.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="fgbfdb " textAlignment="CENTER" wrappingWidth="175.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="psuedoPlayer5" layoutX="75.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="fgrhvd" textAlignment="CENTER" wrappingWidth="175.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="psuedoPlayer6" layoutX="75.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dfgrtynbgf" textAlignment="CENTER" wrappingWidth="161.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
