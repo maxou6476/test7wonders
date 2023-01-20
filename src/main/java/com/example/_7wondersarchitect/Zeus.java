@@ -1,11 +1,10 @@
 package com.example._7wondersarchitect;
 
-public class Artemis extends Wonders{
-    String nom = "Artemis";
+public class Zeus extends Wonders{
+    String nom = "Zeus";
     int NBPiece = 5;
     int NBPiececonstru;
-    public Artemis(String nom, int NBPiece, int NBPiececonstru) {
-
+    public Zeus(String nom, int NBPiece, int NBPiececonstru) {
         super(nom, NBPiece, NBPiececonstru);
     }
 }
