@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelReader;
+import javafx.scene.image.WritableImage;
 import javafx.scene.text.Text;
 
 import java.io.File;
@@ -16,6 +18,8 @@ public class GameController implements Initializable{
 
     @FXML
     private ImageView imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7;
+    @FXML
+    private ImageView imgCarteJoueur1;
     @FXML
     private Text psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7;
 
@@ -33,6 +37,11 @@ public class GameController implements Initializable{
         Image hallicarnasimage = new Image(new File("src/main/resources/images/finish/all_wonders/hallicarnas_choice.png").toURI().toString());
         Image rhodesimage = new Image(new File("src/main/resources/images/finish/all_wonders/rhodes_choice.png").toURI().toString());
         Image zeusimage = new Image(new File("src/main/resources/images/finish/all_wonders/zeus_choice.png").toURI().toString());
+        Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
+
+        //PixelReader reader = carteAllImage.getPixelReader();
+        Image tile = new WritableImage(carteAllImage.getPixelReader(), 0, 0, 255, 377);
+        imgCarteJoueur1.setImage(tile);
 
         for(int i=1;i<jinx_aff.nbPlayer;i++) {
             tabimgPlayerTurn[i].setLayoutY(100);
@@ -60,6 +69,9 @@ public class GameController implements Initializable{
             }
 
             tabpsuedoPlayer[i].setText(jinx_aff.pseudoPlayer[i]);
+
+
+
         }
     }
 }

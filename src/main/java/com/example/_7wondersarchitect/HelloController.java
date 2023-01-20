@@ -62,7 +62,6 @@ public class HelloController implements Initializable{
         for(int i=0;i<(int)slider_player.getValue()-2;i++){
            StartAnchor.getChildren().add(tabplayer[i]);
         }
-
     }
 
 
