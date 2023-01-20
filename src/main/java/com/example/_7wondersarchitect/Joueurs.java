@@ -1,47 +1,38 @@
 package com.example._7wondersarchitect;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Joueurs {
-    List<Cartes> cartejoueur = new ArrayList<Cartes>();
-    List<Jetons> jetonsjoueur = new ArrayList<Jetons>();
-    Wonders wonder;
-    String nom;
+    private String name;
+    private ArrayList<Cartes> hand;
 
-    public Joueurs(String nom){
-        this.nom = nom;
+
+    public Joueurs(String name) {
+        this.name = name;
+        this.hand = new ArrayList<Cartes>();
+
     }
 
-    void getCarte(Cartes carte){
-        cartejoueur.add(carte);
-    }
-
-    void getWonder(Wonders w){
-        wonder = w;
-    }
-
-    void affichecartes(){
-        System.out.print("[");
-        for(int i = 0; i < cartejoueur.size(); i++){
-            if(i == cartejoueur.size()-1) {
-                System.out.print(cartejoueur.get(i).nom);
-            }else{
-                System.out.print(cartejoueur.get(i).nom+",");
-            }
+    public void drawCard(Deck deck) {
+        Cartes card = deck.drawCard();
+        if (card != null) {
+            hand.add(card);
         }
-        System.out.println("]");
     }
 
-    void affichejetons(){
-        System.out.print("[");
-        for(int i = 0; i < jetonsjoueur.size(); i++){
-            if(i == jetonsjoueur.size()-1) {
-                System.out.print(jetonsjoueur.get(i).nom);
-            }else{
-                System.out.print(jetonsjoueur.get(i).nom+",");
-            }
+    public void playCard(Cartes card) {
+        if (hand.contains(card)) {
+            hand.remove(card);
+            //Implement the effect of the card here
         }
-        System.out.println("]");
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Cartes> getHand() {
+        return hand;
+    }
+
 }
