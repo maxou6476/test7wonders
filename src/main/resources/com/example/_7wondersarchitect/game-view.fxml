@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -57,12 +58,13 @@
       </Text>
 
       <ImageView fx:id="imgCarteDeck" fitHeight="125.0" fitWidth="116.0" layoutX="542.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgCarteJoueur1" fitHeight="140.0" fitWidth="100.0" layoutX="852.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgCarteJoueur2" fitHeight="140.0" fitWidth="110.0" layoutX="195.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgCarteJoueur3" fitHeight="125.0" fitWidth="116.0" layoutX="724.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgCarteJoueur7" fitHeight="140.0" fitWidth="110.0" layoutX="852.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgCarteJoueur1" fitHeight="140.0" fitWidth="110.0" layoutX="195.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgCarteJoueur2" fitHeight="125.0" fitWidth="116.0" layoutX="724.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgCarteJoueur3" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgCarteJoueur4" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgCarteJoueur5" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgCarteJoueur6" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgCarteJoueur7" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="993.0" layoutY="632.0" mnemonicParsing="false" onAction="#passTour" prefHeight="66.0" prefWidth="136.0" text="PASSER LE TOUR" />
    </children>
 </AnchorPane>

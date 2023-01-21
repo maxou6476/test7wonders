@@ -47,4 +47,5 @@ public class jinx_aff extends Application
     public static String[] pseudoPlayer = new String[7];
     public static String[] merveillesPlayer = new String[7];
     public static int nbPlayer = 0;
+    public static int playerTurn = 0;
 }

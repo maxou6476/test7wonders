@@ -1,5 +1,6 @@
 package com.example._7wondersarchitect;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -25,7 +26,7 @@ public class GameController implements Initializable{
     @FXML
     private Text psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7;
 
-    private int playerTurn = 0,playerCarte = 0;
+    private int playerTurnTemp = jinx_aff.nbPlayer-1;
 
 
 
@@ -39,15 +40,22 @@ public class GameController implements Initializable{
     }
 
 
+    @FXML
+    void passTour(ActionEvent event) {
+        jinx_aff.playerTurn++;
+        if(jinx_aff.playerTurn == jinx_aff.nbPlayer){
+            jinx_aff.playerTurn = 0;
+        }
+        changeImgMerv();
+    }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        ImageView[] tabimgPlayerTurn = {imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7};
+    public void changeImgCard() {
+
+    }
+
+    public void changeImgMerv(){
         Text[] tabpsuedoPlayer = {psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7};
-        int[] tabWaitingP = {550,450,350,250,150,50,0};
-        int[] tabWaitingPpsuedo = {510,410,310,210,110,10,0};
-
-        ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
+        ImageView[] tabimgPlayerTurn = {imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7};
 
         Image alexandriaImage = new Image(new File("src/main/resources/images/finish/all_wonders/alexandria_choice.png").toURI().toString());
         Image artemisimage = new Image(new File("src/main/resources/images/finish/all_wonders/artemis_choice.png").toURI().toString());
@@ -56,15 +64,48 @@ public class GameController implements Initializable{
         Image hallicarnasimage = new Image(new File("src/main/resources/images/finish/all_wonders/hallicarnas_choice.png").toURI().toString());
         Image rhodesimage = new Image(new File("src/main/resources/images/finish/all_wonders/rhodes_choice.png").toURI().toString());
         Image zeusimage = new Image(new File("src/main/resources/images/finish/all_wonders/zeus_choice.png").toURI().toString());
+
+        System.out.println(jinx_aff.playerTurn);
+
+        for(int i=jinx_aff.playerTurn;i<jinx_aff.nbPlayer+jinx_aff.playerTurn;i++) {
+            if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "alexandria") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(alexandriaImage);
+            } else if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "artemis") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(artemisimage);
+            } else if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "babylon") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(babylonimage);
+            } else if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "gizeh") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(gizehimage);
+            } else if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "hallicarnas") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(hallicarnasimage);
+            } else if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "rhodes") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(rhodesimage);
+            } else if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "zeus") {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(zeusimage);
+            } else {
+                tabimgPlayerTurn[(i) % jinx_aff.nbPlayer].setImage(zeusimage);
+            }
+            tabpsuedoPlayer[i % jinx_aff.nbPlayer].setText(jinx_aff.pseudoPlayer[i % jinx_aff.nbPlayer]);
+        }
+        
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        changeImgMerv();
+        ImageView[] tabimgPlayerTurn = {imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7};
+        Text[] tabpsuedoPlayer = {psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7};
+        int[] tabWaitingP = {550,450,350,250,150,50,0};
+        int[] tabWaitingPpsuedo = {510,410,310,210,110,10,0};
+
+        ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
         Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
+
+
 
         PixelReader reader = carteAllImage.getPixelReader();
         Image deckImage = new WritableImage(reader,0,0,255,377);
         imgCarteDeck.setImage(deckImage);
         Image tile = new WritableImage(reader, 255, 0, 255, 377);
-        imgCarteJoueur1.setImage(tile);
-        Image tile2 = new WritableImage(reader, 510, 0, 255, 377);
-        imgCarteJoueur2.setImage(tile2);
 
         //Placement des merveilles des joueurs
         for(int i=1;i<jinx_aff.nbPlayer;i++) {
@@ -74,34 +115,19 @@ public class GameController implements Initializable{
             tabpsuedoPlayer[i].setLayoutX(tabWaitingPpsuedo[jinx_aff.nbPlayer - 2] + 200 * (i-1));
         }
         //placement des cartes des joueurs (pas le deck)
-        for (int i=0;i<jinx_aff.nbPlayer;i++)
+        for (int i=1;i<jinx_aff.nbPlayer-1;i++)
         {
-            if(i == jinx_aff.nbPlayer-1){
                 tabimgCarte[i].setLayoutY(75);
                 tabimgCarte[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1) + 50);
-            }
-
         }
-        for(int i=0;i<jinx_aff.nbPlayer;i++) {
-            if (jinx_aff.merveillesPlayer[i] == "alexandria") {
-                tabimgPlayerTurn[i].setImage(alexandriaImage);
-            } else if (jinx_aff.merveillesPlayer[i] == "artemis") {
-                tabimgPlayerTurn[i].setImage(artemisimage);
-            } else if (jinx_aff.merveillesPlayer[i] == "babylon") {
-                tabimgPlayerTurn[i].setImage(babylonimage);
-            } else if (jinx_aff.merveillesPlayer[i] == "gizeh") {
-                tabimgPlayerTurn[i].setImage(gizehimage);
-            } else if (jinx_aff.merveillesPlayer[i] == "hallicarnas") {
-                tabimgPlayerTurn[i].setImage(hallicarnasimage);
-            } else if (jinx_aff.merveillesPlayer[i] == "rhodes") {
-                tabimgPlayerTurn[i].setImage(rhodesimage);
-            } else if (jinx_aff.merveillesPlayer[i] == "zeus") {
-                tabimgPlayerTurn[i].setImage(zeusimage);
-            }else{
-                tabimgPlayerTurn[i].setImage(zeusimage);
-            }
-
-            tabpsuedoPlayer[i].setText(jinx_aff.pseudoPlayer[i]);
+        tabimgCarte[jinx_aff.nbPlayer-1].setLayoutY(505);
+        tabimgCarte[jinx_aff.nbPlayer-1].setLayoutX(852);
+        tabimgCarte[jinx_aff.nbPlayer-1].setFitWidth(110);
+        tabimgCarte[jinx_aff.nbPlayer-1].setFitHeight(140);
+        for (int i=0;i<jinx_aff.nbPlayer;i++)
+        {
+            tabimgCarte[i].setImage(tile);
+        }
 
             imgCarteDeck.setOnMouseEntered(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
@@ -115,35 +141,37 @@ public class GameController implements Initializable{
                 }
             });
 
-/*
-            tabimgCarte[playerTurn].setOnMouseEntered(new EventHandler<MouseEvent>() {
+            //interaction carte joueurs droite et gauche
+            tabimgCarte[jinx_aff.playerTurn].setOnMouseEntered(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
-                    scaleUp(tabimgCarte[playerTurn]);
+                    System.out.println(jinx_aff.playerTurn);
+                    scaleUp(tabimgCarte[0]);
                 }
             });
 
-            tabimgCarte[playerTurn].setOnMouseExited(new EventHandler<MouseEvent>() {
+            tabimgCarte[jinx_aff.playerTurn].setOnMouseExited(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
-                    scaleDown(tabimgCarte[playerTurn]);
+                    System.out.println(jinx_aff.playerTurn);
+                    scaleDown(tabimgCarte[0]);
                 }
             });
 
+            //joueur - 1
+                tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseEntered(new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent mouseEvent) {
+                        System.out.println(jinx_aff.nbPlayer-1);
+                        scaleUp(tabimgCarte[jinx_aff.nbPlayer-1]);
+                    }
+                });
+
+                tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseExited(new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent mouseEvent) {
+                        System.out.println(jinx_aff.nbPlayer-1);
+                        scaleDown(tabimgCarte[jinx_aff.nbPlayer-1]);
+                    }
+                });
 
 
-            tabimgCarte[playerTurn-1].setOnMouseEntered(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent mouseEvent) {
-                    scaleUp(tabimgCarte[playerTurn-1]);
-                }
-            });
-
-            tabimgCarte[playerTurn-1].setOnMouseExited(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent mouseEvent) {
-                    scaleDown(tabimgCarte[playerTurn-1]);
-                }
-            });
-            */
-
-
-        }
+        
     }
 }
