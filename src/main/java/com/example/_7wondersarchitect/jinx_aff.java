@@ -48,4 +48,28 @@ public class jinx_aff extends Application
     public static String[] merveillesPlayer = new String[7];
     public static int nbPlayer = 0;
     public static int playerTurn = 0;
+
+    //cartes
+    public static Cartes Bois = new Cartes_Grises("Bois");
+    public static Cartes Brique = new Cartes_Grises("Brique");
+    public static Cartes Fer = new Cartes_Grises("Fer");
+    public static Cartes Verre = new Cartes_Grises("Verre");
+    public static Cartes Parchemin = new Cartes_Grises("Parchemin");
+
+    public static Cartes Or = new Cartes_Jaunes("Or");
+
+    public static Cartes Point = new Cartes_Bleues("Point de victoire");
+    public static Cartes Point_Chat = new Cartes_Bleues("Point de victoire avec le pion chat");
+
+    public static Cartes Engrenage = new Cartes_Vertes("Engrenage");
+    public static Cartes Compas = new Cartes_Vertes("Compas");
+    public static Cartes Tablette = new Cartes_Vertes("Tablette");
+
+    public static Cartes Bouclier = new Cartes_Rouges("Bouclier");
+    public static Cartes Bouclier_corne1 = new Cartes_Rouges("Bouclier avec 1 corne");
+    public static Cartes Bouclier_corne2 = new Cartes_Rouges("Bouclier avec 2 cornes");
+    //jetons
+    public static Jetons Conflit = new Jeton_Conflit("Jeton de conflit");
+    public static Jetons Progres = new Jeton_Progres("Jeton de progres");
+    public static Jetons Victoire_militaire = new Jeton_Victoir_Militaire("Jeton de victoire militaire");
 }

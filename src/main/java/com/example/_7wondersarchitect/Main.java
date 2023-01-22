@@ -4,38 +4,282 @@ import java.util.ArrayList;
 
 public class Main {
 
+    public static Deck deckRhodes = new Deck();
+    public static Deck deckHalicarnass = new Deck();
+    public static Deck deckGizeh = new Deck();
+    public static Deck deckArtemis = new Deck();
+    public static Deck deckZeus = new Deck();
+    public static Deck deckBabylon = new Deck();
+    public static Deck deckAlexandria = new Deck();
+    public static Deck deckCenter = new Deck();
+    //public static Jetons jetonsL = new Jetons();
+
     public static void main(String[] args) {
 
+        init_decks();
         //launch de l'interface graphique
         jinx_aff jinxAff = new jinx_aff();
         jinxAff.jinx_launch();
 
 
-        ArrayList<Object> Deck = new ArrayList<>();
-        ArrayList<Object> Jetons = new ArrayList<>();
+    /*
+        Deck.add(jinx_aff.Fer);
+        Deck.add(jinx_aff.Verre);
+        Deck.add(jinx_aff.Parchemin);
+        Deck.add(jinx_aff.Or);
+        Deck.add(jinx_aff.Bois);
+        Deck.add(jinx_aff.Brique);
+        Deck.add(jinx_aff.Fer);
+        Deck.add(jinx_aff.Verre);
+        Deck.add(jinx_aff.Parchemin);
+        Deck.add(jinx_aff.Or);
+         */
 
-        Cartes Bois = new Cartes_Grises("Bois");
-        Cartes Brique = new Cartes_Grises("Brique");
-        Cartes Fer = new Cartes_Grises("Fer");
-        Cartes Verre = new Cartes_Grises("Verre");
-        Cartes Parchemin = new Cartes_Grises("Parchemin");
+    }
 
-        Cartes Or = new Cartes_Jaunes("Or");
-
-        Cartes Point = new Cartes_Bleues("Point de victoire");
-        Cartes Point_Chat = new Cartes_Bleues("Point de victoire avec le pion chat");
-
-        Cartes Engrenage = new Cartes_Vertes("Engrenage");
-        Cartes Compas = new Cartes_Vertes("Compas");
-        Cartes Tablette = new Cartes_Vertes("Tablette");
-
-        Cartes Bouclier = new Cartes_Rouges("Bouclier");
-        Cartes Bouclier_corne1 = new Cartes_Rouges("Bouclier avec 1 corne");
-        Cartes Bouclier_corne2 = new Cartes_Rouges("Bouclier avec 2 cornes");
-
-        Jetons Conflit = new Jeton_Conflit("Jeton de conflit");
-        Jetons Progres = new Jeton_Progres("Jeton de progres");
-        Jetons Victoire_militaire = new Jeton_Victoir_Militaire("Jeton de victoire militaire");
-
+    public static void init_decks(){
+        //Rhodes
+        Main.deckRhodes.addCard(jinx_aff.Or);
+        Main.deckRhodes.addCard(jinx_aff.Or);
+        Main.deckRhodes.addCard(jinx_aff.Fer);
+        Main.deckRhodes.addCard(jinx_aff.Fer);
+        Main.deckRhodes.addCard(jinx_aff.Brique);
+        Main.deckRhodes.addCard(jinx_aff.Brique);
+        Main.deckRhodes.addCard(jinx_aff.Bois);
+        Main.deckRhodes.addCard(jinx_aff.Bois);
+        Main.deckRhodes.addCard(jinx_aff.Verre);
+        Main.deckRhodes.addCard(jinx_aff.Verre);
+        Main.deckRhodes.addCard(jinx_aff.Parchemin);
+        Main.deckRhodes.addCard(jinx_aff.Parchemin);
+        Main.deckRhodes.addCard(jinx_aff.Engrenage);
+        Main.deckRhodes.addCard(jinx_aff.Engrenage);
+        Main.deckRhodes.addCard(jinx_aff.Compas);
+        Main.deckRhodes.addCard(jinx_aff.Tablette);
+        Main.deckRhodes.addCard(jinx_aff.Point);
+        Main.deckRhodes.addCard(jinx_aff.Point);
+        Main.deckRhodes.addCard(jinx_aff.Point_Chat);
+        Main.deckRhodes.addCard(jinx_aff.Point_Chat);
+        Main.deckRhodes.addCard(jinx_aff.Bouclier);
+        Main.deckRhodes.addCard(jinx_aff.Bouclier);
+        Main.deckRhodes.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckRhodes.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckRhodes.addCard(jinx_aff.Bouclier_corne1);
+        //Rhodes
+        Main.deckHalicarnass.addCard(jinx_aff.Or);
+        Main.deckHalicarnass.addCard(jinx_aff.Or);
+        Main.deckHalicarnass.addCard(jinx_aff.Or);
+        Main.deckHalicarnass.addCard(jinx_aff.Fer);
+        Main.deckHalicarnass.addCard(jinx_aff.Fer);
+        Main.deckHalicarnass.addCard(jinx_aff.Brique);
+        Main.deckHalicarnass.addCard(jinx_aff.Brique);
+        Main.deckHalicarnass.addCard(jinx_aff.Bois);
+        Main.deckHalicarnass.addCard(jinx_aff.Bois);
+        Main.deckHalicarnass.addCard(jinx_aff.Verre);
+        Main.deckHalicarnass.addCard(jinx_aff.Verre);
+        Main.deckHalicarnass.addCard(jinx_aff.Parchemin);
+        Main.deckHalicarnass.addCard(jinx_aff.Engrenage);
+        Main.deckHalicarnass.addCard(jinx_aff.Compas);
+        Main.deckHalicarnass.addCard(jinx_aff.Tablette);
+        Main.deckHalicarnass.addCard(jinx_aff.Tablette);
+        Main.deckHalicarnass.addCard(jinx_aff.Point);
+        Main.deckHalicarnass.addCard(jinx_aff.Point);
+        Main.deckHalicarnass.addCard(jinx_aff.Point_Chat);
+        Main.deckHalicarnass.addCard(jinx_aff.Point_Chat);
+        Main.deckHalicarnass.addCard(jinx_aff.Bouclier);
+        Main.deckHalicarnass.addCard(jinx_aff.Bouclier);
+        Main.deckHalicarnass.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckHalicarnass.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckHalicarnass.addCard(jinx_aff.Bouclier_corne1);
+        //Gizeh
+        Main.deckGizeh.addCard(jinx_aff.Or);
+        Main.deckGizeh.addCard(jinx_aff.Or);
+        Main.deckGizeh.addCard(jinx_aff.Or);
+        Main.deckGizeh.addCard(jinx_aff.Fer);
+        Main.deckGizeh.addCard(jinx_aff.Fer);
+        Main.deckGizeh.addCard(jinx_aff.Brique);
+        Main.deckGizeh.addCard(jinx_aff.Bois);
+        Main.deckGizeh.addCard(jinx_aff.Bois);
+        Main.deckGizeh.addCard(jinx_aff.Verre);
+        Main.deckGizeh.addCard(jinx_aff.Verre);
+        Main.deckGizeh.addCard(jinx_aff.Parchemin);
+        Main.deckGizeh.addCard(jinx_aff.Parchemin);
+        Main.deckGizeh.addCard(jinx_aff.Engrenage);
+        Main.deckGizeh.addCard(jinx_aff.Compas);
+        Main.deckGizeh.addCard(jinx_aff.Compas);
+        Main.deckGizeh.addCard(jinx_aff.Tablette);
+        Main.deckGizeh.addCard(jinx_aff.Point);
+        Main.deckGizeh.addCard(jinx_aff.Point);
+        Main.deckGizeh.addCard(jinx_aff.Point_Chat);
+        Main.deckGizeh.addCard(jinx_aff.Point_Chat);
+        Main.deckGizeh.addCard(jinx_aff.Point_Chat);
+        Main.deckGizeh.addCard(jinx_aff.Bouclier);
+        Main.deckGizeh.addCard(jinx_aff.Bouclier);
+        Main.deckGizeh.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckGizeh.addCard(jinx_aff.Bouclier_corne1);
+        //Artemis
+        Main.deckArtemis.addCard(jinx_aff.Or);
+        Main.deckArtemis.addCard(jinx_aff.Or);
+        Main.deckArtemis.addCard(jinx_aff.Or);
+        Main.deckArtemis.addCard(jinx_aff.Fer);
+        Main.deckArtemis.addCard(jinx_aff.Fer);
+        Main.deckArtemis.addCard(jinx_aff.Brique);
+        Main.deckArtemis.addCard(jinx_aff.Brique);
+        Main.deckArtemis.addCard(jinx_aff.Bois);
+        Main.deckArtemis.addCard(jinx_aff.Bois);
+        Main.deckArtemis.addCard(jinx_aff.Verre);
+        Main.deckArtemis.addCard(jinx_aff.Verre);
+        Main.deckArtemis.addCard(jinx_aff.Parchemin);
+        Main.deckArtemis.addCard(jinx_aff.Parchemin);
+        Main.deckArtemis.addCard(jinx_aff.Engrenage);
+        Main.deckArtemis.addCard(jinx_aff.Compas);
+        Main.deckArtemis.addCard(jinx_aff.Compas);
+        Main.deckArtemis.addCard(jinx_aff.Tablette);
+        Main.deckArtemis.addCard(jinx_aff.Tablette);
+        Main.deckArtemis.addCard(jinx_aff.Point);
+        Main.deckArtemis.addCard(jinx_aff.Point_Chat);
+        Main.deckArtemis.addCard(jinx_aff.Point_Chat);
+        Main.deckArtemis.addCard(jinx_aff.Bouclier);
+        Main.deckArtemis.addCard(jinx_aff.Bouclier);
+        Main.deckArtemis.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckArtemis.addCard(jinx_aff.Bouclier_corne1);
+        //Zeus
+        Main.deckZeus.addCard(jinx_aff.Or);
+        Main.deckZeus.addCard(jinx_aff.Or);
+        Main.deckZeus.addCard(jinx_aff.Or);
+        Main.deckZeus.addCard(jinx_aff.Fer);
+        Main.deckZeus.addCard(jinx_aff.Fer);
+        Main.deckZeus.addCard(jinx_aff.Brique);
+        Main.deckZeus.addCard(jinx_aff.Brique);
+        Main.deckZeus.addCard(jinx_aff.Bois);
+        Main.deckZeus.addCard(jinx_aff.Verre);
+        Main.deckZeus.addCard(jinx_aff.Verre);
+        Main.deckZeus.addCard(jinx_aff.Parchemin);
+        Main.deckZeus.addCard(jinx_aff.Parchemin);
+        Main.deckZeus.addCard(jinx_aff.Engrenage);
+        Main.deckZeus.addCard(jinx_aff.Compas);
+        Main.deckZeus.addCard(jinx_aff.Tablette);
+        Main.deckZeus.addCard(jinx_aff.Tablette);
+        Main.deckZeus.addCard(jinx_aff.Point);
+        Main.deckZeus.addCard(jinx_aff.Point_Chat);
+        Main.deckZeus.addCard(jinx_aff.Point_Chat);
+        Main.deckZeus.addCard(jinx_aff.Point_Chat);
+        Main.deckZeus.addCard(jinx_aff.Bouclier);
+        Main.deckZeus.addCard(jinx_aff.Bouclier);
+        Main.deckZeus.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckZeus.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckZeus.addCard(jinx_aff.Bouclier_corne1);
+        //Babylon
+        Main.deckBabylon.addCard(jinx_aff.Or);
+        Main.deckBabylon.addCard(jinx_aff.Or);
+        Main.deckBabylon.addCard(jinx_aff.Or);
+        Main.deckBabylon.addCard(jinx_aff.Fer);
+        Main.deckBabylon.addCard(jinx_aff.Brique);
+        Main.deckBabylon.addCard(jinx_aff.Brique);
+        Main.deckBabylon.addCard(jinx_aff.Bois);
+        Main.deckBabylon.addCard(jinx_aff.Bois);
+        Main.deckBabylon.addCard(jinx_aff.Verre);
+        Main.deckBabylon.addCard(jinx_aff.Verre);
+        Main.deckBabylon.addCard(jinx_aff.Parchemin);
+        Main.deckBabylon.addCard(jinx_aff.Parchemin);
+        Main.deckBabylon.addCard(jinx_aff.Engrenage);
+        Main.deckBabylon.addCard(jinx_aff.Engrenage);
+        Main.deckBabylon.addCard(jinx_aff.Compas);
+        Main.deckBabylon.addCard(jinx_aff.Compas);
+        Main.deckBabylon.addCard(jinx_aff.Tablette);
+        Main.deckBabylon.addCard(jinx_aff.Point);
+        Main.deckBabylon.addCard(jinx_aff.Point);
+        Main.deckBabylon.addCard(jinx_aff.Point_Chat);
+        Main.deckBabylon.addCard(jinx_aff.Point_Chat);
+        Main.deckBabylon.addCard(jinx_aff.Bouclier);
+        Main.deckBabylon.addCard(jinx_aff.Bouclier);
+        Main.deckBabylon.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckBabylon.addCard(jinx_aff.Bouclier_corne1);
+        //Alexandria
+        Main.deckAlexandria.addCard(jinx_aff.Or);
+        Main.deckAlexandria.addCard(jinx_aff.Or);
+        Main.deckAlexandria.addCard(jinx_aff.Or);
+        Main.deckAlexandria.addCard(jinx_aff.Or);
+        Main.deckAlexandria.addCard(jinx_aff.Fer);
+        Main.deckAlexandria.addCard(jinx_aff.Fer);
+        Main.deckAlexandria.addCard(jinx_aff.Brique);
+        Main.deckAlexandria.addCard(jinx_aff.Brique);
+        Main.deckAlexandria.addCard(jinx_aff.Bois);
+        Main.deckAlexandria.addCard(jinx_aff.Bois);
+        Main.deckAlexandria.addCard(jinx_aff.Verre);
+        Main.deckAlexandria.addCard(jinx_aff.Parchemin);
+        Main.deckAlexandria.addCard(jinx_aff.Parchemin);
+        Main.deckAlexandria.addCard(jinx_aff.Engrenage);
+        Main.deckAlexandria.addCard(jinx_aff.Engrenage);
+        Main.deckAlexandria.addCard(jinx_aff.Compas);
+        Main.deckAlexandria.addCard(jinx_aff.Tablette);
+        Main.deckAlexandria.addCard(jinx_aff.Point);
+        Main.deckAlexandria.addCard(jinx_aff.Point);
+        Main.deckAlexandria.addCard(jinx_aff.Point_Chat);
+        Main.deckAlexandria.addCard(jinx_aff.Point_Chat);
+        Main.deckAlexandria.addCard(jinx_aff.Bouclier);
+        Main.deckAlexandria.addCard(jinx_aff.Bouclier);
+        Main.deckAlexandria.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckAlexandria.addCard(jinx_aff.Bouclier_corne1);
+        //Deck central
+        Main.deckCenter.addCard(jinx_aff.Or);
+        Main.deckCenter.addCard(jinx_aff.Or);
+        Main.deckCenter.addCard(jinx_aff.Or);
+        Main.deckCenter.addCard(jinx_aff.Or);
+        Main.deckCenter.addCard(jinx_aff.Or);
+        Main.deckCenter.addCard(jinx_aff.Or);
+        Main.deckCenter.addCard(jinx_aff.Fer);
+        Main.deckCenter.addCard(jinx_aff.Fer);
+        Main.deckCenter.addCard(jinx_aff.Fer);
+        Main.deckCenter.addCard(jinx_aff.Fer);
+        Main.deckCenter.addCard(jinx_aff.Brique);
+        Main.deckCenter.addCard(jinx_aff.Brique);
+        Main.deckCenter.addCard(jinx_aff.Brique);
+        Main.deckCenter.addCard(jinx_aff.Brique);
+        Main.deckCenter.addCard(jinx_aff.Bois);
+        Main.deckCenter.addCard(jinx_aff.Bois);
+        Main.deckCenter.addCard(jinx_aff.Bois);
+        Main.deckCenter.addCard(jinx_aff.Bois);
+        Main.deckCenter.addCard(jinx_aff.Verre);
+        Main.deckCenter.addCard(jinx_aff.Verre);
+        Main.deckCenter.addCard(jinx_aff.Verre);
+        Main.deckCenter.addCard(jinx_aff.Verre);
+        Main.deckCenter.addCard(jinx_aff.Parchemin);
+        Main.deckCenter.addCard(jinx_aff.Parchemin);
+        Main.deckCenter.addCard(jinx_aff.Parchemin);
+        Main.deckCenter.addCard(jinx_aff.Parchemin);
+        Main.deckCenter.addCard(jinx_aff.Engrenage);
+        Main.deckCenter.addCard(jinx_aff.Engrenage);
+        Main.deckCenter.addCard(jinx_aff.Engrenage);
+        Main.deckCenter.addCard(jinx_aff.Engrenage);
+        Main.deckCenter.addCard(jinx_aff.Compas);
+        Main.deckCenter.addCard(jinx_aff.Compas);
+        Main.deckCenter.addCard(jinx_aff.Compas);
+        Main.deckCenter.addCard(jinx_aff.Compas);
+        Main.deckCenter.addCard(jinx_aff.Tablette);
+        Main.deckCenter.addCard(jinx_aff.Tablette);
+        Main.deckCenter.addCard(jinx_aff.Tablette);
+        Main.deckCenter.addCard(jinx_aff.Tablette);
+        Main.deckCenter.addCard(jinx_aff.Point);
+        Main.deckCenter.addCard(jinx_aff.Point);
+        Main.deckCenter.addCard(jinx_aff.Point);
+        Main.deckCenter.addCard(jinx_aff.Point);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Point_Chat);
+        Main.deckCenter.addCard(jinx_aff.Bouclier);
+        Main.deckCenter.addCard(jinx_aff.Bouclier);
+        Main.deckCenter.addCard(jinx_aff.Bouclier);
+        Main.deckCenter.addCard(jinx_aff.Bouclier);
+        Main.deckCenter.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckCenter.addCard(jinx_aff.Bouclier_corne2);
+        Main.deckCenter.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckCenter.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckCenter.addCard(jinx_aff.Bouclier_corne1);
+        Main.deckCenter.addCard(jinx_aff.Bouclier_corne1);
     }
 }

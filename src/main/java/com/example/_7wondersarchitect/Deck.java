@@ -11,6 +11,7 @@ public class Deck {
     }
 
     public void addCard(Cartes card) {
+
         cards.add(card);
     }
 
@@ -29,6 +30,7 @@ public class Deck {
     }
 
     public int getNumberOfCards() {
+
         return cards.size();
     }
 }

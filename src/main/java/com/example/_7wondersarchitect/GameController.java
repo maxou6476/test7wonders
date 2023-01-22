@@ -47,11 +47,17 @@ public class GameController implements Initializable{
             jinx_aff.playerTurn = 0;
         }
         changeImgMerv();
+        changeImgCard();
     }
 
     public void changeImgCard() {
-
+        ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
+        Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
+        PixelReader reader = carteAllImage.getPixelReader();
+        Image playerdeckD = new WritableImage(reader,0,0,255,377);
+        Image playerdeckG = new WritableImage(reader,255,0,255,377);
     }
+
 
     public void changeImgMerv(){
         Text[] tabpsuedoPlayer = {psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7};
@@ -128,7 +134,7 @@ public class GameController implements Initializable{
         {
             tabimgCarte[i].setImage(tile);
         }
-
+            //zoom sur le deck
             imgCarteDeck.setOnMouseEntered(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
                     scaleUp(imgCarteDeck);
@@ -140,8 +146,7 @@ public class GameController implements Initializable{
                     scaleDown(imgCarteDeck);
                 }
             });
-
-            //interaction carte joueurs droite et gauche
+            //interaction carte joueur de gauche
             tabimgCarte[jinx_aff.playerTurn].setOnMouseEntered(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
                     System.out.println(jinx_aff.playerTurn);
@@ -155,8 +160,7 @@ public class GameController implements Initializable{
                     scaleDown(tabimgCarte[0]);
                 }
             });
-
-            //joueur - 1
+            ////interaction carte joueur de droite
                 tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseEntered(new EventHandler<MouseEvent>() {
                     public void handle(MouseEvent mouseEvent) {
                         System.out.println(jinx_aff.nbPlayer-1);
