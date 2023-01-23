@@ -38,6 +38,7 @@ public class HelloController implements Initializable{
 
     @FXML
     protected void switchscene() throws IOException {
+        ChoiceBox[] choiceboxtab = {Player1choicebox,Player2choicebox,Player3choicebox,Player4choicebox,Player5choicebox,Player6choicebox,Player7choicebox};
         jinx_aff.pseudoPlayer[0] = pseudoP1.getText();
         jinx_aff.pseudoPlayer[1] = pseudoP2.getText();
         jinx_aff.pseudoPlayer[2] = pseudoP3.getText();
@@ -46,6 +47,27 @@ public class HelloController implements Initializable{
         jinx_aff.pseudoPlayer[5] = pseudoP6.getText();
         jinx_aff.pseudoPlayer[6] = pseudoP7.getText();
         jinx_aff.nbPlayer = (int)slider_player.getValue();
+
+        for(int i=0;i<jinx_aff.nbPlayer;i++){
+            Joueurs joueurs = new Joueurs();
+
+            if(choiceboxtab[i].getValue() == "alexandria"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.alexandrie,Main.deckAlexandria);
+            }else if(choiceboxtab[i].getValue() == "artemis"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.artemis,Main.deckArtemis);
+            }else if(choiceboxtab[i].getValue() == "babylon"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.babylon,Main.deckBabylon);
+            }else if(choiceboxtab[i].getValue() == "gizeh"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.gizeh,Main.deckGizeh);
+            }else if(choiceboxtab[i].getValue() == "hallicarnas"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.halicarnasse,Main.deckHalicarnass);
+            }else if(choiceboxtab[i].getValue() == "rhodes"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.rhodes,Main.deckRhodes);
+            }else if(choiceboxtab[i].getValue() == "zeus"){
+                joueurs.createJoueurs(jinx_aff.pseudoPlayer[i],jinx_aff.zeus,Main.deckZeus);
+            }
+            jinx_aff.joueursList[i] = joueurs;
+        }
         jinx_aff.loadFXMLScene("game-view.fxml");
     }
 

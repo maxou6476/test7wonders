@@ -4,12 +4,10 @@ public abstract class Wonders{
     String nom;
     int NBPiece;
     int Cartes_Jaunes=2;
-
     int Carte_Grise_Bois = 1;
-
     int Carte_Grise = Carte_Grise_Bois;
-
     int NBPiececonstru;
+
     public Wonders(String nom, int NBPiece, int NBPiececonstru){
         this.nom = nom;
         this.NBPiece = NBPiece;
@@ -19,7 +17,7 @@ public abstract class Wonders{
     // Etape 1 Construction
     public void construction(Joueurs joueurs){
         int nbbois=0,nbpierre=0,nbpapier=0,nbverre=0,nbor=0;
-        for(int i = 0; i <= joueurs.getHand().size();i++) {
+       /* for(int i = 0; i <= joueurs.getHand().size();i++) {
             if(joueurs.getHand().get(i).nom == "Bois"){
                 nbbois++;
             }
@@ -35,7 +33,9 @@ public abstract class Wonders{
             else if(joueurs.getHand().get(i).nom == "Or"){
                 nbor++;
             }
-        }
+
+
+        }*/
         if (NBPiececonstru == 0){
             if (nbor >= 2) {
                     // enlever 2 cartes Jaunes
