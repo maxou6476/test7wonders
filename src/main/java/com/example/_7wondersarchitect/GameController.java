@@ -18,17 +18,29 @@ import java.util.ResourceBundle;
 
 public class GameController implements Initializable{
 
-
     @FXML
     private ImageView imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7;
+
+    @FXML
+    private ImageView imgPlayerTurn1u1,imgPlayerTurn2u1,imgPlayerTurn3u1,imgPlayerTurn4u1,imgPlayerTurn5u1,imgPlayerTurn6u1,imgPlayerTurn7u1;
+    @FXML
+    private ImageView imgPlayerTurn1u2,imgPlayerTurn2u2,imgPlayerTurn3u2,imgPlayerTurn4u2,imgPlayerTurn5u2,imgPlayerTurn6u2,imgPlayerTurn7u2;
+    @FXML
+    private ImageView imgPlayerTurn1u3,imgPlayerTurn2u3,imgPlayerTurn3u3,imgPlayerTurn4u3,imgPlayerTurn5u3,imgPlayerTurn6u3,imgPlayerTurn7u3;
+    @FXML
+    private ImageView imgPlayerTurn1u4,imgPlayerTurn2u4,imgPlayerTurn3u4,imgPlayerTurn4u4,imgPlayerTurn5u4,imgPlayerTurn6u4,imgPlayerTurn7u4;
+    @FXML
+    private ImageView imgPlayerTurn1u5,imgPlayerTurn2u5,imgPlayerTurn3u5,imgPlayerTurn4u5,imgPlayerTurn5u5,imgPlayerTurn6u5,imgPlayerTurn7u5;
+
     @FXML
     private ImageView imgCarteDeck,imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7;
     @FXML
     private Text psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7;
+    @FXML
+    private Text nbBois, nbBouclier, nbBouclierC1,nbBouclierC2,nbBrique,nbCompas,nbEngrenage,nbOr,nbParchemin,nbFer,nbPoint,nbPointChat,nbTablette,nbVerre;
 
-    private int playerTurnTemp = jinx_aff.nbPlayer-1;
-
-
+    public GameController() {
+    }
 
     void scaleUp(ImageView imageview){
         imageview.setScaleX(1.5);
@@ -39,6 +51,61 @@ public class GameController implements Initializable{
         imageview.setScaleY(1);
     }
 
+    public void showResources(){
+        int bois=0, brique=0,fer=0,verre=0,parchemin=0,or=0,point=0,pointchat=0,engrenage=0,compas=0,tablette=0,bouclier1=0,boucliercorne=0,bouclier2cornes=0;
+        Text[] nbres = {nbBois, nbBouclier, nbBouclierC1,nbBouclierC2,nbBrique,nbCompas,nbEngrenage,nbOr,nbParchemin,nbFer,nbPoint,nbPointChat,nbTablette,nbVerre};
+        for(int i=0;i<14;i++){
+            nbres[i].setText("0");
+        }
+        for(int i=0;i<jinx_aff.joueursList[jinx_aff.playerTurn].handSize();i++){
+            String card = jinx_aff.joueursList[jinx_aff.playerTurn].showcard().get(i).getNom();
+            if(card == "Bois"){
+                bois++;
+                nbBois.setText(Integer.toString(bois));
+            }else if(card == "Brique"){
+                brique++;
+                nbBrique.setText(Integer.toString(brique));
+            }else if(card == "Fer"){
+                fer++;
+                nbFer.setText(Integer.toString(fer));
+            }else if(card == "Verre"){
+                verre++;
+                nbVerre.setText(Integer.toString(verre));
+            }else if(card == "Parchemin"){
+                parchemin++;
+                nbParchemin.setText(Integer.toString(parchemin));
+            }else if(card == "Or"){
+                or++;
+                nbOr.setText(Integer.toString(or));
+            }else if(card == "Point de victoire"){
+                point++;
+                nbPoint.setText(Integer.toString(point));
+            }else if(card == "Point de victoire avec le pion chat"){
+                pointchat++;
+                nbPointChat.setText(Integer.toString(pointchat));
+            }else if(card == "Engrenage"){
+                engrenage++;
+                nbEngrenage.setText(Integer.toString(engrenage));
+            }else if(card == "Compas"){
+                compas++;
+                nbCompas.setText(Integer.toString(compas));
+            }else if(card == "Tablette"){
+                tablette++;
+                nbTablette.setText(Integer.toString(tablette));
+            }else if(card == "Bouclier"){
+                bouclier1++;
+                nbBouclier.setText(Integer.toString(bouclier1));
+            }else if(card == "Bouclier avec 1 corne"){
+                boucliercorne++;
+                nbBouclierC1.setText(Integer.toString(boucliercorne));
+            }else if(card == "Bouclier avec 2 cornes"){
+                bouclier2cornes++;
+                nbBouclierC2.setText(Integer.toString(bouclier2cornes));
+            }
+        }
+    }
+
+
 
     @FXML
     void passTour(ActionEvent event) {
@@ -48,34 +115,173 @@ public class GameController implements Initializable{
         }
         changeImgMerv();
         changeImgCard();
+        showResources();
     }
 
     public void changeImgCard() {
         ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
-        Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
-        PixelReader reader = carteAllImage.getPixelReader();
-       /* if (){
 
+        for(int i=jinx_aff.playerTurn;i<jinx_aff.nbPlayer+jinx_aff.playerTurn;i++) {
+
+            if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "alexandria")
+            {
+                cardImage(Main.deckAlexandria.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            } else if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "artemis")
+            {
+                cardImage(Main.deckArtemis.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            } else if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "babylon")
+            {
+                cardImage(Main.deckBabylon.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            } else if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "gizeh")
+            {
+                cardImage(Main.deckGizeh.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            } else if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "hallicarnas")
+            {
+                cardImage(Main.deckHalicarnass.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            } else if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "rhodes")
+            {
+                cardImage(Main.deckRhodes.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            } else if (jinx_aff.merveillesPlayer[i%jinx_aff.nbPlayer] == "zeus")
+            {
+                cardImage(Main.deckZeus.getCards().get(0).getNom(), tabimgCarte[(i - jinx_aff.playerTurn)]);
+            }
         }
-        */
-        Image playerdeckD = new WritableImage(reader,0,0,255,377);
-        Image playerdeckG = new WritableImage(reader,255,0,255,377);
     }
 
+    public void cardImage(String card, ImageView cardimage){
+        Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
+        PixelReader reader = carteAllImage.getPixelReader();
+        Image bois = new WritableImage(reader,0,377,255,377);
+        Image fer = new WritableImage(reader,255,377,255,377);
+        Image brique = new WritableImage(reader,510,377,255,377);
+        Image parchemin = new WritableImage(reader,765,377,255,377);
+        Image verre = new WritableImage(reader,1020,377,255,377);
+        Image or = new WritableImage(reader,1275,377,255,377);
+        Image pointchat = new WritableImage(reader,1530,377,255,377);
+        Image point = new WritableImage(reader,1785,377,255,377);
+
+        Image bouclier1 = new WritableImage(reader,0,754,255,377);
+        Image boucliercorne = new WritableImage(reader,255,754,255,377);
+        Image bouclier2cornes = new WritableImage(reader,510,754,255,377);
+        Image compas = new WritableImage(reader,765,754,255,377);
+        Image engrenage = new WritableImage(reader,1020,754,255,377);
+        Image tablette = new WritableImage(reader,1275,754,255,377);
+
+        Image unknowC = new WritableImage(reader,0,0,255,377);
+
+        if(card == "Bois"){
+            cardimage.setImage(bois);
+        }else if(card == "Brique"){
+            cardimage.setImage(brique);
+        }else if(card == "Fer"){
+            cardimage.setImage(fer);
+        }else if(card == "Verre"){
+            cardimage.setImage(verre);
+        }else if(card == "Parchemin"){
+            cardimage.setImage(parchemin);
+        }else if(card == "Or"){
+            cardimage.setImage(or);
+        }else if(card == "Point de victoire"){
+            cardimage.setImage(point);
+        }else if(card == "Point de victoire avec le pion chat"){
+            cardimage.setImage(pointchat);
+        }else if(card == "Engrenage"){
+            cardimage.setImage(engrenage);
+        }else if(card == "Compas"){
+            cardimage.setImage(compas);
+        }else if(card == "Tablette"){
+            cardimage.setImage(tablette);
+        }else if(card == "Bouclier"){
+            cardimage.setImage(bouclier1);
+        }else if(card == "Bouclier avec 1 corne"){
+            cardimage.setImage(boucliercorne);
+        }else if(card == "Bouclier avec 2 cornes"){
+            cardimage.setImage(bouclier2cornes);
+        }
+        imgCarteDeck.setImage(unknowC);
+    }
+
+
+    public void merveilleUpgrade(){
+        //3420 4438
+        //0 570 1140 1710 2280 2850
+        //0 634 1268 1902 2536 3170 3802
+        ImageView[] tabimgPlayerTurnu1 = {imgPlayerTurn1u1,imgPlayerTurn2u1,imgPlayerTurn3u1,imgPlayerTurn4u1,imgPlayerTurn5u1,imgPlayerTurn6u1,imgPlayerTurn7u1};
+        ImageView[] tabimgPlayerTurnu2 = {imgPlayerTurn1u2,imgPlayerTurn2u2,imgPlayerTurn3u2,imgPlayerTurn4u2,imgPlayerTurn5u2,imgPlayerTurn6u2,imgPlayerTurn7u2};
+        ImageView[] tabimgPlayerTurnu3 = {imgPlayerTurn1u3,imgPlayerTurn2u3,imgPlayerTurn3u3,imgPlayerTurn4u3,imgPlayerTurn5u3,imgPlayerTurn6u3,imgPlayerTurn7u3};
+        ImageView[] tabimgPlayerTurnu4 = {imgPlayerTurn1u4,imgPlayerTurn2u4,imgPlayerTurn3u4,imgPlayerTurn4u4,imgPlayerTurn5u4,imgPlayerTurn6u4,imgPlayerTurn7u4};
+        ImageView[] tabimgPlayerTurnu5 = {imgPlayerTurn1u5,imgPlayerTurn2u5,imgPlayerTurn3u5,imgPlayerTurn4u5,imgPlayerTurn5u5,imgPlayerTurn6u5,imgPlayerTurn7u5};
+
+        Image carteAllImage = new Image(new File("src/main/resources/images/wonders.png").toURI().toString());
+        PixelReader reader = carteAllImage.getPixelReader();
+        Image alexandriaImageu1 = new WritableImage(reader,570,1902,570,634);
+        Image alexandriaImageu2 = new WritableImage(reader,1140,1902,570,634);
+        Image alexandriaImageu3 = new WritableImage(reader,1710,1902,570,634);
+        Image alexandriaImageu4 = new WritableImage(reader,2280,1902,570,634);
+        Image alexandriaImageu5 = new WritableImage(reader,2850,1902,570,634);
+
+        Image artemisimageu1 = new WritableImage(reader,570,3802,570,634);
+        Image artemisimageu2 = new WritableImage(reader,1140,3802,570,634);
+        Image artemisimageu3 = new WritableImage(reader,1710,3802,570,634);
+        Image artemisimageu4 = new WritableImage(reader,2280,3802,570,634);
+        Image artemisimageu5 = new WritableImage(reader,2850,3802,570,634);
+
+        Image babylonimageu1 = new WritableImage(reader,570,634,570,634);
+        Image babylonimageu2 = new WritableImage(reader,1140,634,570,634);
+        Image babylonimageu3 = new WritableImage(reader,1710,634,570,634);
+        Image babylonimageu4 = new WritableImage(reader,2280,634,570,634);
+        Image babylonimageu5 = new WritableImage(reader,2850,634,570,634);
+
+        Image gizehimageu1 = new WritableImage(reader,570,2536,570,634);
+        Image gizehimageu2 = new WritableImage(reader,1140,2536,570,634);
+        Image gizehimageu3 = new WritableImage(reader,1710,2536,570,634);
+        Image gizehimageu4 = new WritableImage(reader,2280,2536,570,634);
+        Image gizehimageu5 = new WritableImage(reader,2850,2536,570,634);
+
+        Image hallicarnasimageu1 = new WritableImage(reader,570,1268,570,634);
+        Image hallicarnasimageu2 = new WritableImage(reader,1140,1268,570,634);
+        Image hallicarnasimageu3 = new WritableImage(reader,1710,1268,570,634);
+        Image hallicarnasimageu4 = new WritableImage(reader,2280,1268,570,634);
+        Image hallicarnasimageu5 = new WritableImage(reader,2850,1268,570,634);
+
+        Image rhodesimageu1 = new WritableImage(reader,570,0,570,634);
+        Image rhodesimageu2 = new WritableImage(reader,1140,0,570,634);
+        Image rhodesimageu3 = new WritableImage(reader,1710,0,570,634);
+        Image rhodesimageu4 = new WritableImage(reader,2280,0,570,634);
+        Image rhodesimageu5 = new WritableImage(reader,2850,0,570,634);
+
+        Image zeusimageu1 = new WritableImage(reader,570,3170,570,634);
+        Image zeusimageu2 = new WritableImage(reader,1140,3170,570,634);
+        Image zeusimageu3 = new WritableImage(reader,1710,3170,570,634);
+        Image zeusimageu4 = new WritableImage(reader,2280,3170,570,634);
+        Image zeusimageu5 = new WritableImage(reader,2850,3170,570,634);
+
+        tabimgPlayerTurnu1[0].setImage(alexandriaImageu1);
+        tabimgPlayerTurnu2[0].setImage(alexandriaImageu2);
+        tabimgPlayerTurnu3[0].setImage(alexandriaImageu3);
+        tabimgPlayerTurnu4[0].setImage(alexandriaImageu4);
+        tabimgPlayerTurnu5[0].setImage(alexandriaImageu5);
+
+    }
+
+    public void changeImgMervU() {
+
+    }
 
     public void changeImgMerv(){
         Text[] tabpsuedoPlayer = {psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7};
         ImageView[] tabimgPlayerTurn = {imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7};
 
-        Image alexandriaImage = new Image(new File("src/main/resources/images/finish/all_wonders/alexandria_choice.png").toURI().toString());
-        Image artemisimage = new Image(new File("src/main/resources/images/finish/all_wonders/artemis_choice.png").toURI().toString());
-        Image babylonimage = new Image(new File("src/main/resources/images/finish/all_wonders/babylon_choice.png").toURI().toString());
-        Image gizehimage = new Image(new File("src/main/resources/images/finish/all_wonders/gizeh_choice.png").toURI().toString());
-        Image hallicarnasimage = new Image(new File("src/main/resources/images/finish/all_wonders/hallicarnas_choice.png").toURI().toString());
-        Image rhodesimage = new Image(new File("src/main/resources/images/finish/all_wonders/rhodes_choice.png").toURI().toString());
-        Image zeusimage = new Image(new File("src/main/resources/images/finish/all_wonders/zeus_choice.png").toURI().toString());
+        Image carteAllImage = new Image(new File("src/main/resources/images/wonders.png").toURI().toString());
+        PixelReader reader = carteAllImage.getPixelReader();
+        Image alexandriaImage = new WritableImage(reader,0,1902,570,634);
+        Image artemisimage = new WritableImage(reader,0,3802,570,634);
+        Image babylonimage = new WritableImage(reader,0,634,570,634);
+        Image gizehimage = new WritableImage(reader,0,2536,570,634);
+        Image hallicarnasimage = new WritableImage(reader,0,1268,570,634);
+        Image rhodesimage = new WritableImage(reader,0,0,570,634);
+        Image zeusimage = new WritableImage(reader,0,3170,570,634);
 
-        System.out.println(jinx_aff.playerTurn);
 
         for(int i=jinx_aff.playerTurn;i<jinx_aff.nbPlayer+jinx_aff.playerTurn;i++) {
             if (jinx_aff.merveillesPlayer[(i) - jinx_aff.playerTurn] == "alexandria") {
@@ -99,10 +305,21 @@ public class GameController implements Initializable{
         }
         
     }
+    @FXML
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         changeImgMerv();
+        changeImgCard();
+
         ImageView[] tabimgPlayerTurn = {imgPlayerTurn1,imgPlayerTurn2,imgPlayerTurn3,imgPlayerTurn4,imgPlayerTurn5,imgPlayerTurn6,imgPlayerTurn7};
+
+        ImageView[] tabimgPlayerTurnu1 = {imgPlayerTurn1u1,imgPlayerTurn2u1,imgPlayerTurn3u1,imgPlayerTurn4u1,imgPlayerTurn5u1,imgPlayerTurn6u1,imgPlayerTurn7u1};
+        ImageView[] tabimgPlayerTurnu2 = {imgPlayerTurn1u2,imgPlayerTurn2u2,imgPlayerTurn3u2,imgPlayerTurn4u2,imgPlayerTurn5u2,imgPlayerTurn6u2,imgPlayerTurn7u2};
+        ImageView[] tabimgPlayerTurnu3 = {imgPlayerTurn1u3,imgPlayerTurn2u3,imgPlayerTurn3u3,imgPlayerTurn4u3,imgPlayerTurn5u3,imgPlayerTurn6u3,imgPlayerTurn7u3};
+        ImageView[] tabimgPlayerTurnu4 = {imgPlayerTurn1u4,imgPlayerTurn2u4,imgPlayerTurn3u4,imgPlayerTurn4u4,imgPlayerTurn5u4,imgPlayerTurn6u4,imgPlayerTurn7u4};
+        ImageView[] tabimgPlayerTurnu5 = {imgPlayerTurn1u5,imgPlayerTurn2u5,imgPlayerTurn3u5,imgPlayerTurn4u5,imgPlayerTurn5u5,imgPlayerTurn6u5,imgPlayerTurn7u5};
+
         Text[] tabpsuedoPlayer = {psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7};
         int[] tabWaitingP = {550,450,350,250,150,50,0};
         int[] tabWaitingPpsuedo = {510,410,310,210,110,10,0};
@@ -110,11 +327,6 @@ public class GameController implements Initializable{
         ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
 
 
-        Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
-        PixelReader reader = carteAllImage.getPixelReader();
-        Image deckImage = new WritableImage(reader,0,0,255,377);
-        imgCarteDeck.setImage(deckImage);
-        Image tile = new WritableImage(reader, 255, 0, 255, 377);
 
         //Placement des merveilles des joueurs
         for(int i=1;i<jinx_aff.nbPlayer;i++) {
@@ -122,6 +334,31 @@ public class GameController implements Initializable{
             tabimgPlayerTurn[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
             tabpsuedoPlayer[i].setLayoutY(180);
             tabpsuedoPlayer[i].setLayoutX(tabWaitingPpsuedo[jinx_aff.nbPlayer - 2] + 200 * (i-1));
+
+            tabimgPlayerTurnu1[i].setLayoutY(50);
+            tabimgPlayerTurnu1[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
+            tabimgPlayerTurnu1[i].setFitWidth(110);
+            tabimgPlayerTurnu1[i].setFitHeight(140);
+
+            tabimgPlayerTurnu2[i].setLayoutY(50);
+            tabimgPlayerTurnu2[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
+            tabimgPlayerTurnu2[i].setFitWidth(110);
+            tabimgPlayerTurnu2[i].setFitHeight(140);
+
+            tabimgPlayerTurnu3[i].setLayoutY(50);
+            tabimgPlayerTurnu3[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
+            tabimgPlayerTurnu3[i].setFitWidth(110);
+            tabimgPlayerTurnu3[i].setFitHeight(140);
+
+            tabimgPlayerTurnu4[i].setLayoutY(50);
+            tabimgPlayerTurnu4[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
+            tabimgPlayerTurnu4[i].setFitWidth(110);
+            tabimgPlayerTurnu4[i].setFitHeight(140);
+
+            tabimgPlayerTurnu5[i].setLayoutY(50);
+            tabimgPlayerTurnu5[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
+            tabimgPlayerTurnu5[i].setFitWidth(110);
+            tabimgPlayerTurnu5[i].setFitHeight(140);
         }
         //placement des cartes des joueurs (pas le deck)
         for (int i=1;i<jinx_aff.nbPlayer-1;i++)
@@ -133,11 +370,34 @@ public class GameController implements Initializable{
         tabimgCarte[jinx_aff.nbPlayer-1].setLayoutX(852);
         tabimgCarte[jinx_aff.nbPlayer-1].setFitWidth(110);
         tabimgCarte[jinx_aff.nbPlayer-1].setFitHeight(140);
-        for (int i=0;i<jinx_aff.nbPlayer;i++)
-        {
-            tabimgCarte[i].setImage(tile);
-        }
-            //zoom sur le deck
+
+
+        tabimgPlayerTurnu1[0].setLayoutY(400);
+        tabimgPlayerTurnu1[0].setLayoutX(425);
+        tabimgPlayerTurnu1[0].setFitWidth(350);
+        tabimgPlayerTurnu1[0].setFitHeight(350);
+
+        tabimgPlayerTurnu2[0].setLayoutY(400);
+        tabimgPlayerTurnu2[0].setLayoutX(425);
+        tabimgPlayerTurnu2[0].setFitWidth(350);
+        tabimgPlayerTurnu2[0].setFitHeight(350);
+
+        tabimgPlayerTurnu3[0].setLayoutY(400);
+        tabimgPlayerTurnu3[0].setLayoutX(425);
+        tabimgPlayerTurnu3[0].setFitWidth(350);
+        tabimgPlayerTurnu3[0].setFitHeight(350);
+
+        tabimgPlayerTurnu4[0].setLayoutY(400);
+        tabimgPlayerTurnu4[0].setLayoutX(425);
+        tabimgPlayerTurnu4[0].setFitWidth(350);
+        tabimgPlayerTurnu4[0].setFitHeight(350);
+
+        tabimgPlayerTurnu5[0].setLayoutY(400);
+        tabimgPlayerTurnu5[0].setLayoutX(425);
+        tabimgPlayerTurnu5[0].setFitWidth(350);
+        tabimgPlayerTurnu5[0].setFitHeight(350);
+
+            //interaction avec le deck
             imgCarteDeck.setOnMouseEntered(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
                     scaleUp(imgCarteDeck);
@@ -149,36 +409,59 @@ public class GameController implements Initializable{
                     scaleDown(imgCarteDeck);
                 }
             });
+            imgCarteDeck.setOnMouseClicked(new EventHandler<MouseEvent>(){
+                public void handle(MouseEvent mouseEvent) {
+                    jinx_aff.joueursList[jinx_aff.playerTurn].addCard(Main.deckCenter.getCards().get(0));
+                    Main.deckCenter.drawCard();
+                    changeImgCard();
+                    showResources();
+                }
+            });
+
+
+
+
             //interaction carte joueur de gauche
             tabimgCarte[jinx_aff.playerTurn].setOnMouseEntered(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
-                    System.out.println(jinx_aff.playerTurn);
                     scaleUp(tabimgCarte[0]);
                 }
             });
-
             tabimgCarte[jinx_aff.playerTurn].setOnMouseExited(new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent mouseEvent) {
-                    System.out.println(jinx_aff.playerTurn);
                     scaleDown(tabimgCarte[0]);
                 }
             });
-            ////interaction carte joueur de droite
-                tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseEntered(new EventHandler<MouseEvent>() {
-                    public void handle(MouseEvent mouseEvent) {
-                        System.out.println(jinx_aff.nbPlayer-1);
-                        scaleUp(tabimgCarte[jinx_aff.nbPlayer-1]);
-                    }
-                });
+            tabimgCarte[jinx_aff.playerTurn].setOnMouseClicked(new EventHandler<MouseEvent>(){
+                public void handle(MouseEvent mouseEvent) {
+                    jinx_aff.joueursList[jinx_aff.playerTurn].addCard(jinx_aff.joueursList[jinx_aff.playerTurn].getDeck().getCards().get(0));
+                    jinx_aff.joueursList[jinx_aff.playerTurn].getDeck().drawCard();
+                    changeImgCard();
+                    showResources();
+                }
+            });
 
-                tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseExited(new EventHandler<MouseEvent>() {
-                    public void handle(MouseEvent mouseEvent) {
-                        System.out.println(jinx_aff.nbPlayer-1);
-                        scaleDown(tabimgCarte[jinx_aff.nbPlayer-1]);
-                    }
-                });
+            //------------------interaction carte joueur de droite--------------------------
+            tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseEntered(new EventHandler<MouseEvent>() {
+                public void handle(MouseEvent mouseEvent) {
+                    scaleUp(tabimgCarte[jinx_aff.nbPlayer-1]);
+                }
+            });
+
+            tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseExited(new EventHandler<MouseEvent>() {
+                public void handle(MouseEvent mouseEvent) {
+                    scaleDown(tabimgCarte[jinx_aff.nbPlayer-1]);
+                }
+            });
 
 
-        
+            tabimgCarte[jinx_aff.nbPlayer-1].setOnMouseClicked(new EventHandler<MouseEvent>(){
+                public void handle(MouseEvent mouseEvent) {
+                    jinx_aff.joueursList[jinx_aff.playerTurn].addCard(jinx_aff.joueursList[(jinx_aff.playerTurn + jinx_aff.nbPlayer-1) % jinx_aff.nbPlayer].getDeck().getCards().get(0));
+                    jinx_aff.joueursList[(jinx_aff.playerTurn + jinx_aff.nbPlayer-1) % jinx_aff.nbPlayer].getDeck().drawCard();
+                    changeImgCard();
+                    showResources();
+                }
+            });
     }
 }

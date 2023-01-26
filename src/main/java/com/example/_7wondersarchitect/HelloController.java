@@ -9,6 +9,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelReader;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -102,13 +104,15 @@ public class HelloController implements Initializable{
             choiceboxtab[i].getItems().add("zeus");
         }
 
-        Image alexandriaImage = new Image(new File("src/main/resources/images/finish/all_wonders/alexandria_choice.png").toURI().toString());
-        Image artemisimage = new Image(new File("src/main/resources/images/finish/all_wonders/artemis_choice.png").toURI().toString());
-        Image babylonimage = new Image(new File("src/main/resources/images/finish/all_wonders/babylon_choice.png").toURI().toString());
-        Image gizehimage = new Image(new File("src/main/resources/images/finish/all_wonders/gizeh_choice.png").toURI().toString());
-        Image hallicarnasimage = new Image(new File("src/main/resources/images/finish/all_wonders/hallicarnas_choice.png").toURI().toString());
-        Image rhodesimage = new Image(new File("src/main/resources/images/finish/all_wonders/rhodes_choice.png").toURI().toString());
-        Image zeusimage = new Image(new File("src/main/resources/images/finish/all_wonders/zeus_choice.png").toURI().toString());
+        Image carteAllImage = new Image(new File("src/main/resources/images/wonders.png").toURI().toString());
+        PixelReader reader = carteAllImage.getPixelReader();
+        Image alexandriaImage = new WritableImage(reader,0,1902,570,634);
+        Image artemisimage = new WritableImage(reader,0,3802,570,634);
+        Image babylonimage = new WritableImage(reader,0,634,570,634);
+        Image gizehimage = new WritableImage(reader,0,2536,570,634);
+        Image hallicarnasimage = new WritableImage(reader,0,1268,570,634);
+        Image rhodesimage = new WritableImage(reader,0,0,570,634);
+        Image zeusimage = new WritableImage(reader,0,3170,570,634);
 
 
         Player1choicebox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {

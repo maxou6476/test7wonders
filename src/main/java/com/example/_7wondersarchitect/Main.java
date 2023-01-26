@@ -1,7 +1,5 @@
 package com.example._7wondersarchitect;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static Deck deckRhodes = new Deck();
@@ -15,26 +13,20 @@ public class Main {
     //public static Jetons jetonsL = new Jetons();
 
     public static void main(String[] args) {
-
         init_decks();
         //launch de l'interface graphique
         jinx_aff jinxAff = new jinx_aff();
+        Main.deckRhodes.shuffle();
+        Main.deckHalicarnass.shuffle();
+        Main.deckGizeh.shuffle();
+        Main.deckArtemis.shuffle();
+        Main.deckZeus.shuffle();
+        Main.deckBabylon.shuffle();
+        Main.deckAlexandria.shuffle();
+
+        Main.deckCenter.shuffle();
+
         jinxAff.jinx_launch();
-
-
-    /*
-        Deck.add(jinx_aff.Fer);
-        Deck.add(jinx_aff.Verre);
-        Deck.add(jinx_aff.Parchemin);
-        Deck.add(jinx_aff.Or);
-        Deck.add(jinx_aff.Bois);
-        Deck.add(jinx_aff.Brique);
-        Deck.add(jinx_aff.Fer);
-        Deck.add(jinx_aff.Verre);
-        Deck.add(jinx_aff.Parchemin);
-        Deck.add(jinx_aff.Or);
-         */
-
     }
 
     public static void init_decks(){

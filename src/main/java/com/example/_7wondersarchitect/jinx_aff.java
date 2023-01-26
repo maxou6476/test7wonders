@@ -21,7 +21,6 @@ public class jinx_aff extends Application
     {
         jinx_aff.setStage(stage);
         jinx_aff.loadFXMLScene("hello-view.fxml");
-
     }
 
     public static void setStage(Stage stage)

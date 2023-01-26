@@ -14,13 +14,54 @@
             <Image url="@../../../images/fond_game.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgPlayerTurn2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgPlayerTurn1" fitHeight="350.0" fitWidth="350.0" layoutX="425.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgPlayerTurn7" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgPlayerTurn6" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgPlayerTurn5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn3" fitHeight="105.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgPlayerTurn4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imgPlayerTurn3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn6" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+
+      <ImageView fx:id="imgPlayerTurn1u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn3u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn4u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn5u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn6u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7u1" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+
+      <ImageView fx:id="imgPlayerTurn1u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn3u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn4u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn5u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn6u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7u2" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+
+      <ImageView fx:id="imgPlayerTurn1u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn3u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn4u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn5u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn6u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7u3" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+
+      <ImageView fx:id="imgPlayerTurn1u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn3u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn4u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn5u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn6u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7u4" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+
+      <ImageView fx:id="imgPlayerTurn1u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn2u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn3u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn4u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn5u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn6u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlayerTurn7u5" fitHeight="105.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+
       <Text fx:id="psuedoPlayer7" layoutX="82.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="161.0">
          <font>
             <Font size="24.0" />
@@ -66,5 +107,81 @@
       <ImageView fx:id="imgCarteJoueur5" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgCarteJoueur6" fitHeight="125.0" fitWidth="116.0" layoutX="734.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="993.0" layoutY="632.0" mnemonicParsing="false" onAction="#passTour" prefHeight="66.0" prefWidth="136.0" text="PASSER LE TOUR" />
+      <ImageView fitHeight="226.0" fitWidth="356.0" layoutX="817.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/ressources.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="nbBois" layoutX="864.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbFer" layoutX="864.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbBrique" layoutX="865.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbParchemin" layoutX="866.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbEngrenage" layoutX="867.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbTablette" layoutX="997.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbPoint" layoutX="997.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbPointChat" layoutX="996.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbOr" layoutX="997.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbVerre" layoutX="998.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbBouclier" layoutX="1097.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbBouclierC1" layoutX="1098.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbBouclierC2" layoutX="1098.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="nbCompas" layoutX="1098.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="1056.0" layoutY="551.0" mnemonicParsing="false" onAction="#merveilleUpgrade" prefHeight="49.0" prefWidth="84.0" text="upgradtest" />
    </children>
 </AnchorPane>

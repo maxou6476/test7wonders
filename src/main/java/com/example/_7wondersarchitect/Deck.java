@@ -22,7 +22,7 @@ public class Deck {
             return null;
         }
     }
-    public ArrayList<Cartes> getDeck() {
+    public ArrayList<Cartes> getCards() {
         return cards;
     }
     public void shuffle() {
