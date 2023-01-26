@@ -177,7 +177,7 @@ public class HelloController implements Initializable{
         Player4choicebox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if(choiceboxtab[4].getValue() == "alexandria"){
+                if(choiceboxtab[3].getValue() == "alexandria"){
                     imageP4_choice.setImage(alexandriaImage);
                 }else if(choiceboxtab[3].getValue() == "artemis"){
                     imageP4_choice.setImage(artemisimage);

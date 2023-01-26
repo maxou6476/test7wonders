@@ -41,12 +41,16 @@ public class jinx_aff extends Application
         jinxstage.setTitle("7Wonders Architect");
         jinxstage.show();
     }
+
     //variables globales du jeu
     public static String[] pseudoPlayer = new String[7];
     public static String[] merveillesPlayer = new String[7];
     public static Joueurs[] joueursList = new Joueurs[7];
+    public static int[] cardpos = {};
     public static int nbPlayer = 0;
     public static int playerTurn = 0;
+
+    //merveilles declaration
     public static Rhodes rhodes = new Rhodes();
     public static Artemis artemis = new Artemis();
     public static Alexandrie alexandrie = new Alexandrie();

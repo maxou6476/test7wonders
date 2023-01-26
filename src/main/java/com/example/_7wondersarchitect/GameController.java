@@ -54,6 +54,10 @@ public class GameController implements Initializable{
         ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
         Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
         PixelReader reader = carteAllImage.getPixelReader();
+       /* if (){
+
+        }
+        */
         Image playerdeckD = new WritableImage(reader,0,0,255,377);
         Image playerdeckG = new WritableImage(reader,255,0,255,377);
     }
@@ -104,10 +108,9 @@ public class GameController implements Initializable{
         int[] tabWaitingPpsuedo = {510,410,310,210,110,10,0};
 
         ImageView[] tabimgCarte = {imgCarteJoueur1,imgCarteJoueur2,imgCarteJoueur3,imgCarteJoueur4,imgCarteJoueur5,imgCarteJoueur6,imgCarteJoueur7};
+
+
         Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
-
-
-
         PixelReader reader = carteAllImage.getPixelReader();
         Image deckImage = new WritableImage(reader,0,0,255,377);
         imgCarteDeck.setImage(deckImage);
