@@ -27,7 +27,6 @@ public abstract class Wonders{
 
 
         for(int i = 0; i <= joueurs.showcard().size()-1;i++) {
-            System.out.println(joueurs.showcard().get(i).getNom());
             if(joueurs.showcard().get(i).getNom() == "Bois"){
                 nbbois++;
             }
@@ -44,7 +43,7 @@ public abstract class Wonders{
                 nbor++;
             }
         }
-        System.out.println(nbbois + " " + nbpierre + " " + nbparchemin +" " + nbverre +" " + nbor);
+        System.out.println("Bois : " + nbbois + " pierre " + nbpierre + " parchemin" + nbparchemin +" verre" + nbverre +" or" + nbor);
         if (NBPiececonstru == 0){
             if (nbor >= 2) {
                 joueurs.showcard().removeIf(obj -> obj.getNom().equals("Or"));

@@ -13,7 +13,7 @@
 
 <AnchorPane fx:id="StartAnchor" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._7wondersarchitect.HelloController">
    <children>
-      <ImageView fitHeight="800.0" fitWidth="1200.0" layoutX="-1.0" pickOnBounds="true">
+      <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true">
          <image>
             <Image url="@../../../images/7wonder.png" />
          </image>
@@ -151,5 +151,10 @@
             <ImageView fx:id="imageP5_choice" fitHeight="95.0" fitWidth="106.0" layoutX="159.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
+      <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="1165.0" layoutY="767.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/cordon_bleu_seul.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
