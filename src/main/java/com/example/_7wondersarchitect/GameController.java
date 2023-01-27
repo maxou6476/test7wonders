@@ -211,6 +211,7 @@ public class GameController implements Initializable{
    public void merveilleUpgrade() {
         jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().construction(jinx_aff.joueursList[jinx_aff.playerTurn]);
         System.out.println(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade());
+
     }
 
 
