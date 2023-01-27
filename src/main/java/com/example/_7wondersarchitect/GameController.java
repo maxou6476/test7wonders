@@ -37,10 +37,8 @@ public class GameController implements Initializable{
     @FXML
     private Text psuedoPlayer1,psuedoPlayer2,psuedoPlayer3,psuedoPlayer4,psuedoPlayer5,psuedoPlayer6,psuedoPlayer7;
     @FXML
-    private Text nbBois, nbBouclier, nbBouclierC1,nbBouclierC2,nbBrique,nbCompas,nbEngrenage,nbOr,nbParchemin,nbFer,nbPoint,nbPointChat,nbTablette,nbVerre;
+    private Text nbBois, nbBouclier, nbBouclierC1,nbBouclierC2,nbBrique,nbCompas,nbEngrenage,nbOr,nbParchemin,nbPierre,nbPoint,nbPointChat,nbTablette,nbVerre;
 
-    public GameController() {
-    }
 
     void scaleUp(ImageView imageview){
         imageview.setScaleX(1.5);
@@ -52,55 +50,57 @@ public class GameController implements Initializable{
     }
 
     public void showResources(){
-        int bois=0, brique=0,fer=0,verre=0,parchemin=0,or=0,point=0,pointchat=0,engrenage=0,compas=0,tablette=0,bouclier1=0,boucliercorne=0,bouclier2cornes=0;
-        Text[] nbres = {nbBois, nbBouclier, nbBouclierC1,nbBouclierC2,nbBrique,nbCompas,nbEngrenage,nbOr,nbParchemin,nbFer,nbPoint,nbPointChat,nbTablette,nbVerre};
+        int bois=0, brique=0,Pierre=0,verre=0,parchemin=0,or=0,point=0,pointchat=0,engrenage=0,compas=0,tablette=0,bouclier1=0,boucliercorne=0,bouclier2cornes=0;
+        Text[] nbres = {nbBois, nbBouclier, nbBouclierC1,nbBouclierC2,nbBrique,nbCompas,nbEngrenage,nbOr,nbParchemin,nbPierre,nbPoint,nbPointChat,nbTablette,nbVerre};
         for(int i=0;i<14;i++){
             nbres[i].setText("0");
         }
-        for(int i=0;i<jinx_aff.joueursList[jinx_aff.playerTurn].handSize();i++){
-            String card = jinx_aff.joueursList[jinx_aff.playerTurn].showcard().get(i).getNom();
-            if(card == "Bois"){
-                bois++;
-                nbBois.setText(Integer.toString(bois));
-            }else if(card == "Brique"){
-                brique++;
-                nbBrique.setText(Integer.toString(brique));
-            }else if(card == "Fer"){
-                fer++;
-                nbFer.setText(Integer.toString(fer));
-            }else if(card == "Verre"){
-                verre++;
-                nbVerre.setText(Integer.toString(verre));
-            }else if(card == "Parchemin"){
-                parchemin++;
-                nbParchemin.setText(Integer.toString(parchemin));
-            }else if(card == "Or"){
-                or++;
-                nbOr.setText(Integer.toString(or));
-            }else if(card == "Point de victoire"){
-                point++;
-                nbPoint.setText(Integer.toString(point));
-            }else if(card == "Point de victoire avec le pion chat"){
-                pointchat++;
-                nbPointChat.setText(Integer.toString(pointchat));
-            }else if(card == "Engrenage"){
-                engrenage++;
-                nbEngrenage.setText(Integer.toString(engrenage));
-            }else if(card == "Compas"){
-                compas++;
-                nbCompas.setText(Integer.toString(compas));
-            }else if(card == "Tablette"){
-                tablette++;
-                nbTablette.setText(Integer.toString(tablette));
-            }else if(card == "Bouclier"){
-                bouclier1++;
-                nbBouclier.setText(Integer.toString(bouclier1));
-            }else if(card == "Bouclier avec 1 corne"){
-                boucliercorne++;
-                nbBouclierC1.setText(Integer.toString(boucliercorne));
-            }else if(card == "Bouclier avec 2 cornes"){
-                bouclier2cornes++;
-                nbBouclierC2.setText(Integer.toString(bouclier2cornes));
+        if (jinx_aff.joueursList[jinx_aff.playerTurn] != null) {
+            for (int i = 0; i < jinx_aff.joueursList[jinx_aff.playerTurn].handSize(); i++) {
+                String card = jinx_aff.joueursList[jinx_aff.playerTurn].showcard().get(i).getNom();
+                if (card == "Bois") {
+                    bois++;
+                    nbBois.setText(Integer.toString(bois));
+                } else if (card == "Brique") {
+                    brique++;
+                    nbBrique.setText(Integer.toString(brique));
+                } else if (card == "Pierre") {
+                    Pierre++;
+                    nbPierre.setText(Integer.toString(Pierre));
+                } else if (card == "Verre") {
+                    verre++;
+                    nbVerre.setText(Integer.toString(verre));
+                } else if (card == "Parchemin") {
+                    parchemin++;
+                    nbParchemin.setText(Integer.toString(parchemin));
+                } else if (card == "Or") {
+                    or++;
+                    nbOr.setText(Integer.toString(or));
+                } else if (card == "Point de victoire") {
+                    point++;
+                    nbPoint.setText(Integer.toString(point));
+                } else if (card == "Point de victoire avec le pion chat") {
+                    pointchat++;
+                    nbPointChat.setText(Integer.toString(pointchat));
+                } else if (card == "Engrenage") {
+                    engrenage++;
+                    nbEngrenage.setText(Integer.toString(engrenage));
+                } else if (card == "Compas") {
+                    compas++;
+                    nbCompas.setText(Integer.toString(compas));
+                } else if (card == "Tablette") {
+                    tablette++;
+                    nbTablette.setText(Integer.toString(tablette));
+                } else if (card == "Bouclier") {
+                    bouclier1++;
+                    nbBouclier.setText(Integer.toString(bouclier1));
+                } else if (card == "Bouclier avec 1 corne") {
+                    boucliercorne++;
+                    nbBouclierC1.setText(Integer.toString(boucliercorne));
+                } else if (card == "Bouclier avec 2 cornes") {
+                    bouclier2cornes++;
+                    nbBouclierC2.setText(Integer.toString(bouclier2cornes));
+                }
             }
         }
     }
@@ -113,9 +113,11 @@ public class GameController implements Initializable{
         if(jinx_aff.playerTurn == jinx_aff.nbPlayer){
             jinx_aff.playerTurn = 0;
         }
+        jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().construction(jinx_aff.joueursList[jinx_aff.playerTurn]);
         changeImgMerv();
         changeImgCard();
         showResources();
+        showUpgrade();
     }
 
     public void changeImgCard() {
@@ -152,7 +154,7 @@ public class GameController implements Initializable{
         Image carteAllImage = new Image(new File("src/main/resources/images/cartes.png").toURI().toString());
         PixelReader reader = carteAllImage.getPixelReader();
         Image bois = new WritableImage(reader,0,377,255,377);
-        Image fer = new WritableImage(reader,255,377,255,377);
+        Image Pierre = new WritableImage(reader,255,377,255,377);
         Image brique = new WritableImage(reader,510,377,255,377);
         Image parchemin = new WritableImage(reader,765,377,255,377);
         Image verre = new WritableImage(reader,1020,377,255,377);
@@ -173,8 +175,8 @@ public class GameController implements Initializable{
             cardimage.setImage(bois);
         }else if(card == "Brique"){
             cardimage.setImage(brique);
-        }else if(card == "Fer"){
-            cardimage.setImage(fer);
+        }else if(card == "Pierre"){
+            cardimage.setImage(Pierre);
         }else if(card == "Verre"){
             cardimage.setImage(verre);
         }else if(card == "Parchemin"){
@@ -201,11 +203,19 @@ public class GameController implements Initializable{
         imgCarteDeck.setImage(unknowC);
     }
 
-
-    public void merveilleUpgrade(){
         //3420 4438
         //0 570 1140 1710 2280 2850
         //0 634 1268 1902 2536 3170 3802
+
+
+   public void merveilleUpgrade() {
+        jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().construction(jinx_aff.joueursList[jinx_aff.playerTurn]);
+        System.out.println(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade());
+    }
+
+
+    public void showUpgrade(){
+        System.out.println("----------------------------------------------------------");
         ImageView[] tabimgPlayerTurnu1 = {imgPlayerTurn1u1,imgPlayerTurn2u1,imgPlayerTurn3u1,imgPlayerTurn4u1,imgPlayerTurn5u1,imgPlayerTurn6u1,imgPlayerTurn7u1};
         ImageView[] tabimgPlayerTurnu2 = {imgPlayerTurn1u2,imgPlayerTurn2u2,imgPlayerTurn3u2,imgPlayerTurn4u2,imgPlayerTurn5u2,imgPlayerTurn6u2,imgPlayerTurn7u2};
         ImageView[] tabimgPlayerTurnu3 = {imgPlayerTurn1u3,imgPlayerTurn2u3,imgPlayerTurn3u3,imgPlayerTurn4u3,imgPlayerTurn5u3,imgPlayerTurn6u3,imgPlayerTurn7u3};
@@ -256,16 +266,108 @@ public class GameController implements Initializable{
         Image zeusimageu4 = new WritableImage(reader,2280,3170,570,634);
         Image zeusimageu5 = new WritableImage(reader,2850,3170,570,634);
 
-        tabimgPlayerTurnu1[0].setImage(alexandriaImageu1);
-        tabimgPlayerTurnu2[0].setImage(alexandriaImageu2);
-        tabimgPlayerTurnu3[0].setImage(alexandriaImageu3);
-        tabimgPlayerTurnu4[0].setImage(alexandriaImageu4);
-        tabimgPlayerTurnu5[0].setImage(alexandriaImageu5);
+        for(int i=0;i<7;i++){
+            tabimgPlayerTurnu1[i].setVisible(false);
+            tabimgPlayerTurnu2[i].setVisible(false);
+            tabimgPlayerTurnu3[i].setVisible(false);
+            tabimgPlayerTurnu4[i].setVisible(false);
+            tabimgPlayerTurnu5[i].setVisible(false);
+        }
+            tabimgPlayerTurnu1[jinx_aff.playerTurn].setVisible(true);
+            tabimgPlayerTurnu2[jinx_aff.playerTurn].setVisible(true);
+            tabimgPlayerTurnu3[jinx_aff.playerTurn].setVisible(true);
+            tabimgPlayerTurnu4[jinx_aff.playerTurn].setVisible(true);
+            tabimgPlayerTurnu5[jinx_aff.playerTurn].setVisible(true);
+            int testdecon = jinx_aff.playerTurn;
+            int testdecon2 = (jinx_aff.nbPlayer - jinx_aff.playerTurn)%jinx_aff.nbPlayer;
 
-    }
 
-    public void changeImgMervU() {
+        if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 1){
 
+            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu1[testdecon].setImage(alexandriaImageu1);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu1[testdecon].setImage(artemisimageu1);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu1[testdecon].setImage(babylonimageu1);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu1[testdecon].setImage(gizehimageu1);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu1[testdecon].setImage(hallicarnasimageu1);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu1[testdecon].setImage(rhodesimageu1);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu1[testdecon].setImage(zeusimageu1);
+            }
+        }
+        if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 2){
+            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu2[testdecon].setImage(alexandriaImageu2);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu2[testdecon].setImage(artemisimageu2);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu2[testdecon].setImage(babylonimageu2);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu2[testdecon].setImage(gizehimageu2);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu2[testdecon].setImage(hallicarnasimageu2);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu2[testdecon].setImage(rhodesimageu2);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu2[testdecon].setImage(zeusimageu2);
+            }
+        }
+        if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 3){
+            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu3[testdecon].setImage(alexandriaImageu3);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu3[testdecon].setImage(artemisimageu3);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu3[testdecon].setImage(babylonimageu3);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu3[testdecon].setImage(gizehimageu3);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu3[testdecon].setImage(hallicarnasimageu3);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu3[testdecon].setImage(rhodesimageu3);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu3[testdecon].setImage(zeusimageu3);
+            }
+        }
+        if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 4){
+            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu4[testdecon].setImage(alexandriaImageu4);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu4[testdecon].setImage(artemisimageu4);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu4[testdecon].setImage(babylonimageu4);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu4[testdecon].setImage(gizehimageu4);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu4[testdecon].setImage(hallicarnasimageu4);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu4[testdecon].setImage(rhodesimageu4);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu4[testdecon].setImage(zeusimageu4);
+            }
+        }
+        if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 5){
+            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu5[testdecon].setImage(alexandriaImageu5);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu5[testdecon].setImage(artemisimageu5);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu5[testdecon].setImage(babylonimageu5);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu5[testdecon].setImage(gizehimageu5);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu5[testdecon].setImage(hallicarnasimageu5);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu5[testdecon].setImage(rhodesimageu5);
+            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu5[testdecon].setImage(zeusimageu5);
+            }
+        }
     }
 
     public void changeImgMerv(){
@@ -305,7 +407,6 @@ public class GameController implements Initializable{
         }
         
     }
-    @FXML
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -335,30 +436,30 @@ public class GameController implements Initializable{
             tabpsuedoPlayer[i].setLayoutY(180);
             tabpsuedoPlayer[i].setLayoutX(tabWaitingPpsuedo[jinx_aff.nbPlayer - 2] + 200 * (i-1));
 
-            tabimgPlayerTurnu1[i].setLayoutY(50);
-            tabimgPlayerTurnu1[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
-            tabimgPlayerTurnu1[i].setFitWidth(110);
-            tabimgPlayerTurnu1[i].setFitHeight(140);
+            tabimgPlayerTurnu1[i].setLayoutY(400);
+            tabimgPlayerTurnu1[i].setLayoutX(425);
+            tabimgPlayerTurnu1[i].setFitWidth(350);
+            tabimgPlayerTurnu1[i].setFitHeight(350);
 
-            tabimgPlayerTurnu2[i].setLayoutY(50);
-            tabimgPlayerTurnu2[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
-            tabimgPlayerTurnu2[i].setFitWidth(110);
-            tabimgPlayerTurnu2[i].setFitHeight(140);
+            tabimgPlayerTurnu2[i].setLayoutY(400);
+            tabimgPlayerTurnu2[i].setLayoutX(425);
+            tabimgPlayerTurnu2[i].setFitWidth(350);
+            tabimgPlayerTurnu2[i].setFitHeight(350);
 
-            tabimgPlayerTurnu3[i].setLayoutY(50);
-            tabimgPlayerTurnu3[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
-            tabimgPlayerTurnu3[i].setFitWidth(110);
-            tabimgPlayerTurnu3[i].setFitHeight(140);
+            tabimgPlayerTurnu3[i].setLayoutY(400);
+            tabimgPlayerTurnu3[i].setLayoutX(425);
+            tabimgPlayerTurnu3[i].setFitWidth(350);
+            tabimgPlayerTurnu3[i].setFitHeight(350);
 
-            tabimgPlayerTurnu4[i].setLayoutY(50);
-            tabimgPlayerTurnu4[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
-            tabimgPlayerTurnu4[i].setFitWidth(110);
-            tabimgPlayerTurnu4[i].setFitHeight(140);
+            tabimgPlayerTurnu4[i].setLayoutY(400);
+            tabimgPlayerTurnu4[i].setLayoutX(425);
+            tabimgPlayerTurnu4[i].setFitWidth(350);
+            tabimgPlayerTurnu4[i].setFitHeight(350);
 
-            tabimgPlayerTurnu5[i].setLayoutY(50);
-            tabimgPlayerTurnu5[i].setLayoutX(tabWaitingP[jinx_aff.nbPlayer - 2] + 200 * (i-1));
-            tabimgPlayerTurnu5[i].setFitWidth(110);
-            tabimgPlayerTurnu5[i].setFitHeight(140);
+            tabimgPlayerTurnu5[i].setLayoutY(400);
+            tabimgPlayerTurnu5[i].setLayoutX(425);
+            tabimgPlayerTurnu5[i].setFitWidth(350);
+            tabimgPlayerTurnu5[i].setFitHeight(350);
         }
         //placement des cartes des joueurs (pas le deck)
         for (int i=1;i<jinx_aff.nbPlayer-1;i++)

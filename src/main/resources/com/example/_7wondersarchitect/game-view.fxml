@@ -117,7 +117,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Text fx:id="nbFer" layoutX="864.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
+      <Text fx:id="nbPierre" layoutX="864.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="45.0">
          <font>
             <Font size="24.0" />
          </font>

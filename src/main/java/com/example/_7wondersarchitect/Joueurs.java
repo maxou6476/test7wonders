@@ -37,4 +37,7 @@ public class Joueurs {
         return Hand.size();
     }
 
+    public Wonders getWonders() {
+        return wonders;
+    }
 }

@@ -62,7 +62,7 @@ public class jinx_aff extends Application
     //Cartes
     public static Cartes Bois = new Cartes_Grises("Bois");
     public static Cartes Brique = new Cartes_Grises("Brique");
-    public static Cartes Fer = new Cartes_Grises("Fer");
+    public static Cartes Pierre = new Cartes_Grises("Pierre");
     public static Cartes Verre = new Cartes_Grises("Verre");
     public static Cartes Parchemin = new Cartes_Grises("Parchemin");
 

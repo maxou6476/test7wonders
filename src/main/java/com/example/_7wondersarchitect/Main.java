@@ -33,8 +33,8 @@ public class Main {
         //Rhodes
         Main.deckRhodes.addCard(jinx_aff.Or);
         Main.deckRhodes.addCard(jinx_aff.Or);
-        Main.deckRhodes.addCard(jinx_aff.Fer);
-        Main.deckRhodes.addCard(jinx_aff.Fer);
+        Main.deckRhodes.addCard(jinx_aff.Pierre);
+        Main.deckRhodes.addCard(jinx_aff.Pierre);
         Main.deckRhodes.addCard(jinx_aff.Brique);
         Main.deckRhodes.addCard(jinx_aff.Brique);
         Main.deckRhodes.addCard(jinx_aff.Bois);
@@ -60,8 +60,8 @@ public class Main {
         Main.deckHalicarnass.addCard(jinx_aff.Or);
         Main.deckHalicarnass.addCard(jinx_aff.Or);
         Main.deckHalicarnass.addCard(jinx_aff.Or);
-        Main.deckHalicarnass.addCard(jinx_aff.Fer);
-        Main.deckHalicarnass.addCard(jinx_aff.Fer);
+        Main.deckHalicarnass.addCard(jinx_aff.Pierre);
+        Main.deckHalicarnass.addCard(jinx_aff.Pierre);
         Main.deckHalicarnass.addCard(jinx_aff.Brique);
         Main.deckHalicarnass.addCard(jinx_aff.Brique);
         Main.deckHalicarnass.addCard(jinx_aff.Bois);
@@ -86,8 +86,8 @@ public class Main {
         Main.deckGizeh.addCard(jinx_aff.Or);
         Main.deckGizeh.addCard(jinx_aff.Or);
         Main.deckGizeh.addCard(jinx_aff.Or);
-        Main.deckGizeh.addCard(jinx_aff.Fer);
-        Main.deckGizeh.addCard(jinx_aff.Fer);
+        Main.deckGizeh.addCard(jinx_aff.Pierre);
+        Main.deckGizeh.addCard(jinx_aff.Pierre);
         Main.deckGizeh.addCard(jinx_aff.Brique);
         Main.deckGizeh.addCard(jinx_aff.Bois);
         Main.deckGizeh.addCard(jinx_aff.Bois);
@@ -112,8 +112,8 @@ public class Main {
         Main.deckArtemis.addCard(jinx_aff.Or);
         Main.deckArtemis.addCard(jinx_aff.Or);
         Main.deckArtemis.addCard(jinx_aff.Or);
-        Main.deckArtemis.addCard(jinx_aff.Fer);
-        Main.deckArtemis.addCard(jinx_aff.Fer);
+        Main.deckArtemis.addCard(jinx_aff.Pierre);
+        Main.deckArtemis.addCard(jinx_aff.Pierre);
         Main.deckArtemis.addCard(jinx_aff.Brique);
         Main.deckArtemis.addCard(jinx_aff.Brique);
         Main.deckArtemis.addCard(jinx_aff.Bois);
@@ -138,8 +138,8 @@ public class Main {
         Main.deckZeus.addCard(jinx_aff.Or);
         Main.deckZeus.addCard(jinx_aff.Or);
         Main.deckZeus.addCard(jinx_aff.Or);
-        Main.deckZeus.addCard(jinx_aff.Fer);
-        Main.deckZeus.addCard(jinx_aff.Fer);
+        Main.deckZeus.addCard(jinx_aff.Pierre);
+        Main.deckZeus.addCard(jinx_aff.Pierre);
         Main.deckZeus.addCard(jinx_aff.Brique);
         Main.deckZeus.addCard(jinx_aff.Brique);
         Main.deckZeus.addCard(jinx_aff.Bois);
@@ -164,7 +164,7 @@ public class Main {
         Main.deckBabylon.addCard(jinx_aff.Or);
         Main.deckBabylon.addCard(jinx_aff.Or);
         Main.deckBabylon.addCard(jinx_aff.Or);
-        Main.deckBabylon.addCard(jinx_aff.Fer);
+        Main.deckBabylon.addCard(jinx_aff.Pierre);
         Main.deckBabylon.addCard(jinx_aff.Brique);
         Main.deckBabylon.addCard(jinx_aff.Brique);
         Main.deckBabylon.addCard(jinx_aff.Bois);
@@ -191,8 +191,8 @@ public class Main {
         Main.deckAlexandria.addCard(jinx_aff.Or);
         Main.deckAlexandria.addCard(jinx_aff.Or);
         Main.deckAlexandria.addCard(jinx_aff.Or);
-        Main.deckAlexandria.addCard(jinx_aff.Fer);
-        Main.deckAlexandria.addCard(jinx_aff.Fer);
+        Main.deckAlexandria.addCard(jinx_aff.Pierre);
+        Main.deckAlexandria.addCard(jinx_aff.Pierre);
         Main.deckAlexandria.addCard(jinx_aff.Brique);
         Main.deckAlexandria.addCard(jinx_aff.Brique);
         Main.deckAlexandria.addCard(jinx_aff.Bois);
@@ -219,10 +219,10 @@ public class Main {
         Main.deckCenter.addCard(jinx_aff.Or);
         Main.deckCenter.addCard(jinx_aff.Or);
         Main.deckCenter.addCard(jinx_aff.Or);
-        Main.deckCenter.addCard(jinx_aff.Fer);
-        Main.deckCenter.addCard(jinx_aff.Fer);
-        Main.deckCenter.addCard(jinx_aff.Fer);
-        Main.deckCenter.addCard(jinx_aff.Fer);
+        Main.deckCenter.addCard(jinx_aff.Pierre);
+        Main.deckCenter.addCard(jinx_aff.Pierre);
+        Main.deckCenter.addCard(jinx_aff.Pierre);
+        Main.deckCenter.addCard(jinx_aff.Pierre);
         Main.deckCenter.addCard(jinx_aff.Brique);
         Main.deckCenter.addCard(jinx_aff.Brique);
         Main.deckCenter.addCard(jinx_aff.Brique);
