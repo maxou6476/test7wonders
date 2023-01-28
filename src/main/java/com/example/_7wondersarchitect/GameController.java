@@ -319,94 +319,94 @@ public class GameController implements Initializable{
             tabimgPlayerTurnu3[jinx_aff.playerTurn].setVisible(true);
             tabimgPlayerTurnu4[jinx_aff.playerTurn].setVisible(true);
             tabimgPlayerTurnu5[jinx_aff.playerTurn].setVisible(true);
-            int testdecon = jinx_aff.playerTurn;
-            int testdecon2 = (jinx_aff.nbPlayer - jinx_aff.playerTurn)%jinx_aff.nbPlayer;
+            int selecttabJwonders = jinx_aff.playerTurn;
+            int selectimagetabJ = (jinx_aff.nbPlayer - jinx_aff.playerTurn)%jinx_aff.nbPlayer;
 
 
         if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 1){
 
-            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
-                tabimgPlayerTurnu1[testdecon].setImage(alexandriaImageu1);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
-                tabimgPlayerTurnu1[testdecon].setImage(artemisimageu1);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
-                tabimgPlayerTurnu1[testdecon].setImage(babylonimageu1);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
-                tabimgPlayerTurnu1[testdecon].setImage(gizehimageu1);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
-                tabimgPlayerTurnu1[testdecon].setImage(hallicarnasimageu1);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
-                tabimgPlayerTurnu1[testdecon].setImage(rhodesimageu1);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
-                tabimgPlayerTurnu1[testdecon].setImage(zeusimageu1);
+            if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(alexandriaImageu1);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(artemisimageu1);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(babylonimageu1);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(gizehimageu1);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(hallicarnasimageu1);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(rhodesimageu1);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu1[selecttabJwonders].setImage(zeusimageu1);
             }
         }
         if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 2){
-            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
-                tabimgPlayerTurnu2[testdecon].setImage(alexandriaImageu2);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
-                tabimgPlayerTurnu2[testdecon].setImage(artemisimageu2);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
-                tabimgPlayerTurnu2[testdecon].setImage(babylonimageu2);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
-                tabimgPlayerTurnu2[testdecon].setImage(gizehimageu2);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
-                tabimgPlayerTurnu2[testdecon].setImage(hallicarnasimageu2);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
-                tabimgPlayerTurnu2[testdecon].setImage(rhodesimageu2);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
-                tabimgPlayerTurnu2[testdecon].setImage(zeusimageu2);
+            if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(alexandriaImageu2);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(artemisimageu2);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(babylonimageu2);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(gizehimageu2);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(hallicarnasimageu2);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(rhodesimageu2);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu2[selecttabJwonders].setImage(zeusimageu2);
             }
         }
         if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 3){
-            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
-                tabimgPlayerTurnu3[testdecon].setImage(alexandriaImageu3);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
-                tabimgPlayerTurnu3[testdecon].setImage(artemisimageu3);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
-                tabimgPlayerTurnu3[testdecon].setImage(babylonimageu3);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
-                tabimgPlayerTurnu3[testdecon].setImage(gizehimageu3);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
-                tabimgPlayerTurnu3[testdecon].setImage(hallicarnasimageu3);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
-                tabimgPlayerTurnu3[testdecon].setImage(rhodesimageu3);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
-                tabimgPlayerTurnu3[testdecon].setImage(zeusimageu3);
+            if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(alexandriaImageu3);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(artemisimageu3);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(babylonimageu3);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(gizehimageu3);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(hallicarnasimageu3);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(rhodesimageu3);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu3[selecttabJwonders].setImage(zeusimageu3);
             }
         }
         if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 4){
-            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
-                tabimgPlayerTurnu4[testdecon].setImage(alexandriaImageu4);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
-                tabimgPlayerTurnu4[testdecon].setImage(artemisimageu4);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
-                tabimgPlayerTurnu4[testdecon].setImage(babylonimageu4);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
-                tabimgPlayerTurnu4[testdecon].setImage(gizehimageu4);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
-                tabimgPlayerTurnu4[testdecon].setImage(hallicarnasimageu4);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
-                tabimgPlayerTurnu4[testdecon].setImage(rhodesimageu4);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
-                tabimgPlayerTurnu4[testdecon].setImage(zeusimageu4);
+            if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(alexandriaImageu4);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(artemisimageu4);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(babylonimageu4);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(gizehimageu4);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(hallicarnasimageu4);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(rhodesimageu4);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu4[selecttabJwonders].setImage(zeusimageu4);
             }
         }
         if(jinx_aff.joueursList[jinx_aff.playerTurn].getWonders().getUpgrade() >= 5){
-            if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Alexandrie"){
-                tabimgPlayerTurnu5[testdecon].setImage(alexandriaImageu5);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Artemis"){
-                tabimgPlayerTurnu5[testdecon].setImage(artemisimageu5);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Babylon"){
-                tabimgPlayerTurnu5[testdecon].setImage(babylonimageu5);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Gizeh"){
-                tabimgPlayerTurnu5[testdecon].setImage(gizehimageu5);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Halicarnasse"){
-                tabimgPlayerTurnu5[testdecon].setImage(hallicarnasimageu5);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Rhodes"){
-                tabimgPlayerTurnu5[testdecon].setImage(rhodesimageu5);
-            }else if(jinx_aff.joueursList[testdecon2].getWonders().getnomM() == "Zeus"){
-                tabimgPlayerTurnu5[testdecon].setImage(zeusimageu5);
+            if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Alexandrie"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(alexandriaImageu5);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Artemis"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(artemisimageu5);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Babylon"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(babylonimageu5);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Gizeh"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(gizehimageu5);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Halicarnasse"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(hallicarnasimageu5);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Rhodes"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(rhodesimageu5);
+            }else if(jinx_aff.joueursList[selectimagetabJ].getWonders().getnomM() == "Zeus"){
+                tabimgPlayerTurnu5[selecttabJwonders].setImage(zeusimageu5);
             }
         }
     }
